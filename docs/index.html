@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;,&quot;java&quot;,&quot;swift&quot;]">
+  <body class="index" data-languages="[&quot;json&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,9 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="javascript">json</a>
-              <a href="#" data-language-name="java">Android</a>
-              <a href="#" data-language-name="swift">iOS</a>
+              <a href="#" data-language-name="json">json</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -222,34 +220,142 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#prerequisites" class="toc-h2 toc-link" data-title="Introduction">Prerequisites</a>
+                    <a href="#log-in-post" class="toc-h2 toc-link" data-title="Authentication">Log in (POST)</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-a-session-put" class="toc-h2 toc-link" data-title="Authentication">Refresh a Session (PUT)</a>
+                  </li>
+                  <li>
+                    <a href="#logout-delete" class="toc-h2 toc-link" data-title="Authentication">Logout (DELETE)</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#wsapi-example-authentication" class="toc-h1 toc-link" data-title="WSAPI Example: Authentication">WSAPI Example: Authentication</a>
+            <a href="#authorization" class="toc-h1 toc-link" data-title="Authorization">Authorization</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#log-in" class="toc-h2 toc-link" data-title="WSAPI Example: Authentication">Log in</a>
-                  </li>
-                  <li>
-                    <a href="#refresh-a-session" class="toc-h2 toc-link" data-title="WSAPI Example: Authentication">Refresh a Session</a>
-                  </li>
-                  <li>
-                    <a href="#logout" class="toc-h2 toc-link" data-title="WSAPI Example: Authentication">Logout</a>
+                    <a href="#processing-transactions" class="toc-h2 toc-link" data-title="Authorization">Processing Transactions</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#sdk-example-payment-authorization" class="toc-h1 toc-link" data-title="SDK Example: Payment Authorization">SDK Example: Payment Authorization</a>
+            <a href="#transactions" class="toc-h1 toc-link" data-title="Transactions">Transactions</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#processauthtransactionwithcardreader" class="toc-h2 toc-link" data-title="SDK Example: Payment Authorization">processAuthTransactionWithCardReader</a>
+                    <a href="#record-a-cash-transaction" class="toc-h2 toc-link" data-title="Transactions">Record a Cash Transaction</a>
                   </li>
                   <li>
-                    <a href="#processkeyedcreditauthtransaction" class="toc-h2 toc-link" data-title="SDK Example: Payment Authorization">processKeyedCreditAuthTransaction</a>
+                    <a href="#get-a-transaction" class="toc-h2 toc-link" data-title="Transactions">Get a Transaction</a>
+                  </li>
+                  <li>
+                    <a href="#transaction-history" class="toc-h2 toc-link" data-title="Transactions">Transaction History</a>
+                  </li>
+                  <li>
+                    <a href="#send-email-receipt" class="toc-h2 toc-link" data-title="Transactions">Send Email Receipt</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#retrieve-user-information" class="toc-h2 toc-link" data-title="Users">Retrieve User Information</a>
+                  </li>
+                  <li>
+                    <a href="#get-username-availability" class="toc-h2 toc-link" data-title="Users">Get Username Availability</a>
+                  </li>
+                  <li>
+                    <a href="#update-user-details" class="toc-h2 toc-link" data-title="Users">Update User Details</a>
+                  </li>
+                  <li>
+                    <a href="#forgot-password" class="toc-h2 toc-link" data-title="Users">Forgot Password</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#packages" class="toc-h1 toc-link" data-title="Packages">Packages</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-eligible-pricing-packages" class="toc-h2 toc-link" data-title="Packages">Get Eligible Pricing Packages</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#profiles" class="toc-h1 toc-link" data-title="Profiles">Profiles</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#retrieve-eligible-profiles" class="toc-h2 toc-link" data-title="Profiles">Retrieve Eligible Profiles</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#organization" class="toc-h1 toc-link" data-title="Organization">Organization</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#boarding-a-merchant" class="toc-h2 toc-link" data-title="Organization">Boarding a Merchant</a>
+                  </li>
+                  <li>
+                    <a href="#uodate-organization-billing-information" class="toc-h2 toc-link" data-title="Organization">Uodate Organization Billing Information</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#merchants" class="toc-h1 toc-link" data-title="Merchants">Merchants</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#retrieve-merchant-information" class="toc-h2 toc-link" data-title="Merchants">Retrieve Merchant Information</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#reference-information" class="toc-h1 toc-link" data-title="Reference Information">Reference Information</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-status-codes" class="toc-h2 toc-link" data-title="Reference Information">HTTP Status Codes</a>
+                  </li>
+                  <li>
+                    <a href="#error-response-json-format" class="toc-h2 toc-link" data-title="Reference Information">Error Response JSON Format</a>
+                  </li>
+                  <li>
+                    <a href="#error-types" class="toc-h2 toc-link" data-title="Reference Information">Error Types</a>
+                  </li>
+                  <li>
+                    <a href="#error-response-json-format-2" class="toc-h2 toc-link" data-title="Reference Information">Error Response JSON Format</a>
+                  </li>
+                  <li>
+                    <a href="#error-codes" class="toc-h2 toc-link" data-title="Reference Information">Error Codes</a>
+                  </li>
+                  <li>
+                    <a href="#transaction-codes" class="toc-h2 toc-link" data-title="Reference Information">Transaction Codes</a>
+                  </li>
+                  <li>
+                    <a href="#pos-entry-modes" class="toc-h2 toc-link" data-title="Reference Information">POS Entry Modes</a>
+                  </li>
+                  <li>
+                    <a href="#pos-capabilities" class="toc-h2 toc-link" data-title="Reference Information">POS Capabilities</a>
+                  </li>
+                  <li>
+                    <a href="#pos-types" class="toc-h2 toc-link" data-title="Reference Information">POS Types</a>
+                  </li>
+                  <li>
+                    <a href="#reversal-reasons" class="toc-h2 toc-link" data-title="Reference Information">Reversal Reasons</a>
+                  </li>
+                  <li>
+                    <a href="#fallback-reasons" class="toc-h2 toc-link" data-title="Reference Information">Fallback Reasons</a>
+                  </li>
+                  <li>
+                    <a href="#pos-entry-sources" class="toc-h2 toc-link" data-title="Reference Information">POS Entry Sources</a>
+                  </li>
+                  <li>
+                    <a href="#card-presentment-codes" class="toc-h2 toc-link" data-title="Reference Information">Card Presentment Codes</a>
+                  </li>
+                  <li>
+                    <a href="#tokenization-object-properties" class="toc-h2 toc-link" data-title="Reference Information">Tokenization Object Properties</a>
                   </li>
               </ul>
           </li>
@@ -266,20 +372,41 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
+<blockquote>
+<p>API Endpoint</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="nx">https</span><span class="p">:</span><span class="c1">//roamdata.com</span>
+</code></pre>
 <p>The Ingenico WSAPI is a set of REST APIs designed to be consumed by API customers for interaction with our Mobile Commerce Manager. This allows customers availability to all of the features that we offer for accepting payments, as well as everything else required for end-end transaction processing</p>
-<h2 id='prerequisites'>Prerequisites</h2>
-<p>Ingenico uses API keys to allow access to the API. You can register a new API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<aside class="warning">Please replace <code>X-Roam-Key</code> in the header with your API Key.</aside>
+<h1 id='authentication'>Authentication</h1>
+<p>Authenticate your account by including your Application Token in the request field <code>X-Roam-Key</code>. If the credentials and token are valid, the API will return a response with the necessary session token information. This session tken can be used for accessing other APIs available within our library. </p>
 
 <blockquote>
 <p>You will receive a session token by logging in</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
+
+<p>Ingenico uses API keys to allow access to the API. You can register a new API key at our <a href="http://example.com/developers">developer portal</a>.</p>
+
+<aside class="warning">Please replace <code>X-Roam-Key</code> in the header with your API Key.</aside>
+<h2 id='log-in-post'>Log in (POST)</h2>
+<blockquote>
+<p>URL</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
+
+</code></pre>
+<p>First, you must log in to your account using your Application Token and assigned credentials. As stated earlier, this will return your session token along with other various user settings.</p>
+<h3 id='headers'>Headers</h3>
+<blockquote>
+<p>Header</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
 <span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
 <span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
-</code></pre><h3 id='headers'>Headers</h3>
+
+</code></pre>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -308,17 +435,7 @@
 <td>Content type e.g. application/json</td>
 </tr>
 </tbody></table>
-<h1 id='wsapi-example-authentication'>WSAPI Example: Authentication</h1><h2 id='log-in'>Log in</h2>
-<blockquote>
-<p>Header</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
-<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
 
-</code></pre>
 <blockquote>
 <p>Request</p>
 </blockquote>
@@ -327,9 +444,35 @@
   <span class="s2">"password"</span><span class="p">:</span><span class="s2">"pwd123"</span>
 <span class="p">}</span>
 
-</code></pre>
+</code></pre><h3 id='input-parameters'>Input Parameters</h3>
+<p>Pass the following values in the request body to successfully log in. </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_name</td>
+<td>String</td>
+<td>Yes</td>
+<td>User&#39;s unique identifier</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>Yes</td>
+<td>User&#39;s password</td>
+</tr>
+</tbody></table>
+<h3 id='response-parameters'>Response Parameters</h3>
+<p>If the request is successful, you should receive a request with the following objects defined. </p>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response:</p>
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="s2">"chain_id"</span><span class="p">:</span> <span class="s2">"679"</span><span class="p">,</span>
@@ -434,10 +577,94 @@
 <span class="p">}</span>
 
 </code></pre>
-<p>This call will log in to the system and return a session token, along with various user settings.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>POST http://example.com/WSAPI/Authentication</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>chainID</td>
+<td>String</td>
+<td>Yes</td>
+<td>Gateway identifier for specifying processor together with store_id.</td>
+</tr>
+<tr>
+<td>store_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>Gateway identifier for specifying processor together with chain_id</td>
+</tr>
+<tr>
+<td>terminal_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>MCM identifier for device.</td>
+</tr>
+<tr>
+<td>organization_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>The ID of the user&#39;s parent organization.</td>
+</tr>
+<tr>
+<td>organization_type</td>
+<td>Organization Type</td>
+<td>Yes</td>
+<td>The type of the user&#39;s parent organization.</td>
+</tr>
+<tr>
+<td>processor</td>
+<td>Processor</td>
+<td>No</td>
+<td>Processor Information including name, profile name, etc.</td>
+</tr>
+<tr>
+<td>session</td>
+<td>Session</td>
+<td>Yes</td>
+<td>Session info including token and expiration information.</td>
+</tr>
+<tr>
+<td>user</td>
+<td>user</td>
+<td>Yes</td>
+<td>Information for the authenticated user.</td>
+</tr>
+<tr>
+<td>configuration</td>
+<td>List</td>
+<td>Yes</td>
+<td>Last login timestamp</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Remember — This will return your session token!
+</aside>
+<h2 id='refresh-a-session-put'>Refresh a Session (PUT)</h2>
+<blockquote>
+<p>URL</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
+
+</code></pre>
+<p>This call is used to keep a logged-in session alive. This API method will refresh a valid session and extend the Session Token expiration time. </p>
+<h3 id='headers-2'>Headers</h3>
+<blockquote>
+<p>Header</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>
+<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
+<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
+<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
+<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
+
+</code></pre>
+<aside class="notice">Please replace <code>X-Roam-Key</code> (in the header) with your session token returned from Login.</aside>
+
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -446,91 +673,53 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>user_name</td>
+<td>X-Roam-Key</td>
 <td>Yes</td>
-<td>User name</td>
+<td>Application token that identifies the request origin. This key is unique to every client, as well as every environment. Please contact API Support (APIsupport.us@ingenico.com) to get this key.</td>
 </tr>
 <tr>
-<td>password</td>
+<td>X-Roam-ApiVersion</td>
 <td>Yes</td>
-<td>Password</td>
-</tr>
-</tbody></table>
-<h3 id='response-parameters'>Response Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>chainID</td>
-<td>String</td>
-<td>xxx</td>
+<td>Version of the API being used (e.g. 6.0.0)</td>
 </tr>
 <tr>
-<td>store_id</td>
-<td>String</td>
-<td>xxx</td>
+<td>X-Roam-ClientVersion</td>
+<td>Yes</td>
+<td>Client version which can be vary by application. This is set by developers (e.g. 1.0.0)</td>
 </tr>
 <tr>
-<td>terminal_id</td>
-<td>String</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>organization_id</td>
-<td>String</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>organization_type</td>
-<td>OrganizationType</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>processor</td>
-<td>Processor</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>session</td>
-<td>Session</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>user</td>
-<td>user</td>
-<td>xxx</td>
-</tr>
-<tr>
-<td>configuration</td>
-<td>List</td>
-<td>xxx</td>
+<td>Content-Type</td>
+<td>Yes</td>
+<td>Content type e.g. application/json</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — This will return your session token!
-</aside>
-<h2 id='refresh-a-session'>Refresh a Session</h2>
-<blockquote>
-<p>Header</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Token</span><span class="p">:</span> <span class="s2">"MCM6-420ba742-ee06-401a-b1a6-0f6054a3e20d"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
-<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
-</code></pre>
 <blockquote>
 <p>Request</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">
 
-</span></code></pre>
+</span></code></pre><h3 id='input-parameters-2'>Input Parameters</h3>
+<p>A request body is not needed to refresh a session. </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>N/A</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Response:</p>
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
   <span class="s2">"chain_id"</span><span class="p">:</span> <span class="s2">"679"</span><span class="p">,</span>
@@ -549,27 +738,59 @@ Remember — This will return your session token!
   <span class="p">}</span>
 <span class="p">}</span>
 
-</code></pre>
-<aside class="notice">Please replace <code>X-Roam-Token</code> (in the header) with your session token returned from Login.</aside>
+</code></pre><h3 id='response-parameters-2'>Response Parameters</h3>
+<p>If your request is successful, you will receive a response with the following objects defined:</p>
 
-<p>Keeps the logged in session alive. This API method refreshes a valid session and extends the session token expiry time. </p>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>PUT http://example.com/WSAPI/Authentication</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>NA</td>
-<td>NA</td>
+<td>chainID</td>
+<td>String</td>
+<td>Yes</td>
+<td>Gateway identifier for specifying processor together with store_id.</td>
+</tr>
+<tr>
+<td>store_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>Gateway identifier for specifying processor together with chain_id</td>
+</tr>
+<tr>
+<td>terminal_id</td>
+<td>String</td>
+<td>Yes</td>
+<td>MCM identifier for device.</td>
+</tr>
+<tr>
+<td>organization_type</td>
+<td>Organization Type</td>
+<td>Yes</td>
+<td>The type of the user&#39;s parent organization.</td>
+</tr>
+<tr>
+<td>user</td>
+<td>user</td>
+<td>Yes</td>
+<td>Information for the authenticated user.</td>
 </tr>
 </tbody></table>
 
 <aside class="success">HTTP Status code: 200 OK denotes success</aside>
-<h2 id='logout'>Logout</h2>
+<h2 id='logout-delete'>Logout (DELETE)</h2>
+<blockquote>
+<p>URL</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
+
+</code></pre>
+<p>This call is used to log the user out of an active session, invalidating the existing session token. </p>
+
 <blockquote>
 <p>Header</p>
 </blockquote>
@@ -588,11 +809,7 @@ Remember — This will return your session token!
 </blockquote>
 <pre class="highlight javascript tab-javascript"><code><span class="nx">HTTP</span> <span class="nx">Status</span> <span class="nx">Code</span> <span class="mi">200</span> <span class="nx">OK</span>
 
-</code></pre>
-<p>This call will log the user out of an active session, invalidating the existing session token.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/WSAPI/Authentication</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+</code></pre><h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -606,177 +823,103 @@ Remember — This will return your session token!
 </tbody></table>
 
 <aside class="success">HTTP Status code: 200 OK denotes success</aside>
-<h1 id='sdk-example-payment-authorization'>SDK Example: Payment Authorization</h1><h2 id='processauthtransactionwithcardreader'>processAuthTransactionWithCardReader</h2><pre class="highlight java tab-java"><code><span class="n">CreditAuthTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CreditAuthTransactionRequest</span><span class="o">(</span><span class="n">amount</span><span class="o">,</span>
-<span class="n">productList</span><span class="o">,</span> <span class="n">longitude</span><span class="o">,</span> <span class="n">latitude</span><span class="o">,</span>
-<span class="n">transactionGroupID</span><span class="o">);</span>
+<h1 id='authorization'>Authorization</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='processing-transactions'>Processing Transactions</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processAuthTransactionWithCardReader</span><span class="o">(</span><span class="n">request</span>
-<span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
+<p><code>GET http://example.com/api/artists</code></p>
 
-</code></pre><pre class="highlight swift tab-swift"><code><span class="kt">IMSCreditAuthTransactionRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[[</span><span class="kt">IMSCreditAuthTransactionRequest</span> <span class="n">alloc</span><span class="p">]</span> <span class="nv">initWithAmount</span><span class="p">:</span><span class="n">amount</span>
-                                                                                       <span class="nv">andProducts</span><span class="p">:</span><span class="n">productList</span>                                                                                 
-                                                                                      <span class="nv">andLongitude</span><span class="p">:</span><span class="n">longitude</span>
-                                                                                       <span class="nv">andLatitude</span><span class="p">:</span><span class="n">latitude</span>
-                                                                             <span class="nv">andTransactionGroupID</span><span class="p">:</span><span class="n">transactionGroupID</span>
-                                                                               <span class="nv">andTransactionNotes</span><span class="p">:</span><span class="n">transactionNote</span>
-                                                                              <span class="nv">andMerchantInvoiceID</span><span class="p">:</span><span class="n">invocieID</span>
-                                                                   <span class="nv">andShowNotesAndInvoiceOnReceipt</span><span class="p">:</span><span class="kc">true</span>
-                                                                         <span class="nv">andTokenRequestParameters</span><span class="p">:</span><span class="n">tokenRequest</span><span class="p">];</span>
+<p>Retrieve a specific artist using the following URL:</p>
 
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
 
-<span class="p">[[</span><span class="kt">Ingenico</span> <span class="n">sharedInstance</span><span class="p">]</span><span class="o">.</span><span class="kt">Payment</span> <span class="nv">processCreditAuthTransactionWithCardReader</span><span class="p">:</span><span class="n">request</span>
-                               <span class="nv">andUpdateProgress</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">IMSProgressMessage</span> <span class="n">message</span><span class="p">,</span> <span class="kt">NSString</span> <span class="o">*</span><span class="n">extraMessage</span><span class="p">)</span>
-                               <span class="p">{</span>
-                                    <span class="cm">/*The progress message indicates the stage the transaction is at*/</span>
-                               <span class="p">}</span>
-                               <span class="nv">andSelectApplication</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">NSArray</span> <span class="o">*</span><span class="n">applicationList</span><span class="p">,</span> <span class="kt">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">,</span> <span class="kt">ApplicationSelectedResponse</span> <span class="o">*</span><span class="n">appReponse</span><span class="p">)</span>
-                               <span class="p">{</span>
-                                    <span class="cm">/*This callback indicates the card inserted supports multiple Applications and requires user to pick one for this transaction*/</span>
-                               <span class="p">}</span>
-                               <span class="nv">andOnDone</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">IMSTransactionResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="kt">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span>
-                               <span class="p">{</span>
-                                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">){</span>
-                                        <span class="cm">/*Transaction succeeded(code in the response will indicates the result of the transaction)*/</span>
-                                    <span class="p">}</span>
-                                    <span class="k">else</span><span class="p">{</span>
-                                        <span class="cm">/*Transaction failed and the responseCode will indicate the error */</span>
-                                        <span class="kt">NSInteger</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">code</span><span class="p">;</span>
-                                    <span class="p">}</span>
-                               <span class="p">}];</span>
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h1 id='transactions'>Transactions</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='record-a-cash-transaction'>Record a Cash Transaction</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
+<p><code>GET http://example.com/api/artists</code></p>
+<h2 id='get-a-transaction'>Get a Transaction</h2>
+<p>Retrieve a specific artist using the following URL:</p>
 
-</code></pre><h3 id='description'>Description</h3>
-<p>In order to use the SDK, you will first need to initialize it, login, and setup the card reader. This is done to validate a user’s authenticity to use the application, and begin working with the SDK. Please refer to the Ingenico mPOS SDK User Guide (Section 4) if you need assistance with this. 
-One properly initialized and setup, this method call can be used to process a pre-authorized transaction. This will temporarily place the funds on hold, which can then be completed or voided if necessary. </p>
-<h3 id='required-objects'>Required Objects</h3>
-<table><thead>
-<tr>
-<th>Object Name</th>
-<th>Object Type</th>
-<th>Decription</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>amount</td>
-<td>Amount</td>
-<td>Cost of the sale</td>
-</tr>
-<tr>
-<td>products</td>
-<td>List<Product></td>
-<td>List of the products</td>
-</tr>
-<tr>
-<td>longitude</td>
-<td>String</td>
-<td>The location&#39;s longitude</td>
-</tr>
-<tr>
-<td>latitude</td>
-<td>String</td>
-<td>The location&#39;s latitude</td>
-</tr>
-<tr>
-<td>transactionGroupID</td>
-<td>String</td>
-<td>TBI - set as null</td>
-</tr>
-</tbody></table>
-<h2 id='processkeyedcreditauthtransaction'>processKeyedCreditAuthTransaction</h2><pre class="highlight java tab-java"><code><span class="n">KeyedCreditAuthTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KeyedCreditAuthTransactionRequest</span><span class="o">(</span><span class="n">card</span><span class="o">,</span>
-                                                                                    <span class="n">saleAmount</span><span class="o">,</span>
-                                                                                    <span class="n">products</span><span class="o">,</span>
-                                                                                    <span class="n">clerkID</span><span class="o">,</span>
-                                                                                    <span class="n">longitude</span><span class="o">,</span>
-                                                                                    <span class="n">latitude</span><span class="o">,</span>
-                                                                                    <span class="kc">null</span><span class="o">,</span>
-                                                                                    <span class="n">transactionNote</span><span class="o">,</span>
-                                                                                    <span class="n">merchantInvocieID</span><span class="o">,</span>
-                                                                                    <span class="n">Boolean</span><span class="o">.</span><span class="na">TRUE</span><span class="o">,</span>  <span class="c1">//showNotesAndInvoiceOnReceipt</span>
-                                                                                    <span class="n">tokenRequest</span><span class="o">);</span>
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processKeyedCreditAuthTransaction</span><span class="o">(</span><span class="n">request</span><span class="o">,</span><span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
 
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h2 id='transaction-history'>Transaction History</h2><h2 id='send-email-receipt'>Send Email Receipt</h2><h1 id='users'>Users</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='retrieve-user-information'>Retrieve User Information</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
-</code></pre><pre class="highlight swift tab-swift"><code>
-<span class="kt">IMSKeyedCreditAuthTransactionRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[[</span><span class="kt">IMSKeyedCreditAuthTransactionRequest</span> <span class="n">alloc</span><span class="p">]</span> <span class="nv">initWithCard</span><span class="p">:</span><span class="n">card</span>
-                                                                        <span class="nv">andAmount</span><span class="p">:</span><span class="n">amount</span>
-                                                                      <span class="nv">andProducts</span><span class="p">:</span><span class="n">products</span>
-                                                                       <span class="nv">andClerkID</span><span class="p">:</span><span class="n">clerkID</span>
-                                                                     <span class="nv">andLongitude</span><span class="p">:</span><span class="n">longitude</span>
-                                                                      <span class="nv">andLatitude</span><span class="p">:</span><span class="n">latitude</span>
-                                                            <span class="nv">andTransactionGroupID</span><span class="p">:</span><span class="kc">nil</span>
-                                                              <span class="nv">andTransactionNotes</span><span class="p">:</span><span class="n">transactionNote</span>
-                                                             <span class="nv">andMerchantInvoiceID</span><span class="p">:</span><span class="n">invocieID</span>
-                                                  <span class="nv">andShowNotesAndInvoiceOnReceipt</span><span class="p">:</span><span class="kc">true</span>
-                                                        <span class="nv">andTokenRequestParameters</span><span class="p">:</span><span class="n">tokenRequest</span><span class="p">];</span>
+<p><code>GET http://example.com/api/artists</code></p>
+<h2 id='get-username-availability'>Get Username Availability</h2>
+<p>Retrieve a specific artist using the following URL:</p>
 
-<span class="p">[[</span><span class="kt">Ingenico</span> <span class="n">sharedInstance</span><span class="p">]</span><span class="o">.</span><span class="kt">Payment</span> <span class="nv">processKeyedCreditAuthTransaction</span><span class="p">:</span><span class="n">request</span>
-                               <span class="nv">andOnDone</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">IMSTransactionResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="kt">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span>
-                               <span class="p">{</span>
-                                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">){</span>
-                                        <span class="cm">/*Transaction succeeded(code in the response will indicates the result of the transaction)*/</span>
-                                    <span class="p">}</span>
-                                    <span class="k">else</span><span class="p">{</span>
-                                        <span class="cm">/*Transaction failed and the responseCode will indicate the error */</span>
-                                        <span class="kt">NSInteger</span> <span class="n">responseCode</span> <span class="o">=</span> <span class="n">error</span><span class="o">.</span><span class="n">code</span><span class="p">;</span>
-                                    <span class="p">}</span>
-                               <span class="p">}];</span>
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
 
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h2 id='update-user-details'>Update User Details</h2><h2 id='forgot-password'>Forgot Password</h2><h1 id='packages'>Packages</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='get-eligible-pricing-packages'>Get Eligible Pricing Packages</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
-</code></pre><h3 id='description-2'>Description</h3>
-<p>Similar to processing a transaction with the card reader (Section 2_1), you must first initialize the SDK and login before processing a transaction.<br>
-This section describes how to process a pre-authorization transaction by manually keying in the card information to include:</p>
+<p><code>GET http://example.com/api/artists</code></p>
+<h1 id='profiles'>Profiles</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='retrieve-eligible-profiles'>Retrieve Eligible Profiles</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
-<ul>
-<li>Credit Card Number</li>
-<li>Expiration Date</li>
-<li>CVV2/CVC Code</li>
-</ul>
+<p><code>GET http://example.com/api/artists</code></p>
+<h1 id='organization'>Organization</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='boarding-a-merchant'>Boarding a Merchant</h2>
+<p>Retrieve information about all artists using the following URL:</p>
 
-<p>The method in which you input the above information is completely up to you. The most common way is to have an on-screen number pad to type in the numbers. Processing credit cards manually is also an optional functionality for your application. </p>
+<p><code>GET http://example.com/api/artists</code></p>
+<h2 id='uodate-organization-billing-information'>Uodate Organization Billing Information</h2>
+<p>Retrieve a specific artist using the following URL:</p>
 
-<p><strong>If you do not plan on allowing your merchants to accept payment by manually entering a card number, you can disregard this section.</strong>**</p>
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
 
-<p>Again, this will temporarily place the funds on hold, which can then be completed or voided if necessary.</p>
-<h3 id='required-objects-2'>Required Objects</h3>
-<table><thead>
-<tr>
-<th>Object Name</th>
-<th>Object Type</th>
-<th>Decription</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>card</td>
-<td>Card</td>
-<td>Credit Card Information</td>
-</tr>
-<tr>
-<td>amount</td>
-<td>Amount</td>
-<td>Cost of the sale</td>
-</tr>
-<tr>
-<td>products</td>
-<td>List<Product></td>
-<td>List of the products</td>
-</tr>
-<tr>
-<td>clerkID</td>
-<td>String</td>
-<td>Key identifying the client</td>
-</tr>
-<tr>
-<td>longitude</td>
-<td>String</td>
-<td>The location&#39;s longitude</td>
-</tr>
-<tr>
-<td>latitude</td>
-<td>String</td>
-<td>The location&#39;s latitude</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h1 id='merchants'>Merchants</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='retrieve-merchant-information'>Retrieve Merchant Information</h2>
+<p>Retrieve information about all artists using the following URL:</p>
+
+<p><code>GET http://example.com/api/artists</code></p>
+
+<p>Retrieve a specific artist using the following URL:</p>
+
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
+
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h1 id='reference-information'>Reference Information</h1>
+<p>In addition to album and track information, you can also request information about the artists.</p>
+<h2 id='http-status-codes'>HTTP Status Codes</h2>
+<p>Retrieve information about all artists using the following URL:</p>
+
+<p><code>GET http://example.com/api/artists</code></p>
+<h2 id='error-response-json-format'>Error Response JSON Format</h2>
+<p>Retrieve a specific artist using the following URL:</p>
+
+<p><code>GET http://example.com/api/artists/[ID]</code></p>
+
+<p><aside class="notice">
+Replace [ID] with the numeric ID of the artist
+</aside> later.</p>
+<h2 id='error-types'>Error Types</h2><h2 id='error-response-json-format-2'>Error Response JSON Format</h2><h2 id='error-codes'>Error Codes</h2><h2 id='transaction-codes'>Transaction Codes</h2><h2 id='pos-entry-modes'>POS Entry Modes</h2><h2 id='pos-capabilities'>POS Capabilities</h2><h2 id='pos-types'>POS Types</h2><h2 id='reversal-reasons'>Reversal Reasons</h2><h2 id='fallback-reasons'>Fallback Reasons</h2><h2 id='pos-entry-sources'>POS Entry Sources</h2><h2 id='card-presentment-codes'>Card Presentment Codes</h2><h2 id='tokenization-object-properties'>Tokenization Object Properties</h2><h1 id='errors'>Errors</h1>
 <aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
 
 <p>The Kittn API uses the following error codes:</p>
@@ -828,9 +971,7 @@ This section describes how to process a pre-authorization transaction by manuall
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="javascript">json</a>
-                <a href="#" data-language-name="java">Android</a>
-                <a href="#" data-language-name="swift">iOS</a>
+                <a href="#" data-language-name="json">json</a>
           </div>
       </div>
     </div>

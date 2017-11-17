@@ -1,14 +1,14 @@
-# Artists
+# Transactions
 
 In addition to album and track information, you can also request information about the artists.
 
-## Getting all Artists
+## Record a Cash Transaction
 
 Retrieve information about all artists using the following URL:
 
 `GET http://example.com/api/artists`
 
-## Getting an Artist
+## Get a Transaction
 
 Retrieve a specific artist using the following URL:
 
@@ -17,3 +17,7 @@ Retrieve a specific artist using the following URL:
 <aside class="notice">
 Replace [ID] with the numeric ID of the artist
 </aside> later.
+
+## Transaction History
+
+## Send Email Receipt

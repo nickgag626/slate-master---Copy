@@ -30,12 +30,12 @@ search: true
 
 ##What is the mPOS EMV SDK?
 
-The mPOS EMV SDK is a native SDK which provides integration with the range of G-series and RP-series mPOS card readers as well as integration with the EMV Gateway. By managing the end-to-end transaction from card insertion all the way to the certified gateway, the SDK employs a semi-integrated approach and is able to keep the mobile application out of scope for EMV certification and reduce PCI scope. Additionally, the SDK manages the lower level back and forth communication required for an EMV transaction, simplifying the integration.
-The mPOS EMV SDK isolates the transaction processing, reader management, reporting service and user management services from the User Interface.  Because of that, if the app needs to support new devices or backend processors, clients don’t have to redo the app.  Updates to the SDK will provide the client with components to support any future changes in functionality such as adding additional mPOS card readers or transaction types. 
+The mPOS EMV SDK provides integration with a range of Ingenico mPOS card readers, as well as full integration with our EMV Gateway. By managing the end-to-end transaction (from card insertion to certified gateway processing), the SDK employs a semi-integrated approach keeping the mobile application compliant with all EMV certifications while eliminating PCI scope. Additionally, the SDK manages the lower-level back and forth communication required for an EMV transaction, simplifying the integration for developers. The mPOS EMV SDK isolates the transaction processing, reader management, reporting services and user management services from the UI. This way, if an application needs to support new devices or backend processors, clients don’t have to rebuild their application from the ground-up. Updates to the SDK will provide the client with components to support any future changes in functionality, such as adding additional mPOS card readers or supporting new transaction types.
 
-Our EMV gateway in always improving, and we are continually adding supported processors to our gateway to enhance our functionality and marketability. 
+Our EMV gateway is always improving, and we are continually adding supported processors to our gateway to enhance our functionality and marketability.
 
-The integration of the mPOS EMV SDK with an existing application allows an end-user to easily accept and process credit card payments, including EMV Contact, EMV Contactless and Magnetic Card Swipe transactions. 
+The integration of the mPOS EMV SDK with an existing application allows an end-user to easily accept and process credit card payments, including EMV Contact, EMV Contactless and Magnetic Card Swipe transactions.
+
 
 ##What is included in the SDK?
 * **A developer friendly toolkit**, including Android/iOS libraries, SDK documentation, sample code, and test applications;

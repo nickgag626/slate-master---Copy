@@ -1,6 +1,5 @@
 # Setting the Environment
 
-### Description 
 >To set a single allowable device type, you will need to make the following method call:
 
   ```java
@@ -29,7 +28,7 @@ This section will cover the basics if you want to begin using a card reader to a
 Once the SDK cycles through this list, it checks to ensure that there is a match. The SDK reads through the list in an organized manner, meaning the first item added is the first type of device checked. It is recommended to append items to this list depending on what card readers are most commonly used.
 
 
-### Required Objects
+### Required Objects for Environment
 
 Object Name | Object Type | Description
 --------- | ------- | ----------- | -----------

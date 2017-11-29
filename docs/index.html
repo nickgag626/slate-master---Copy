@@ -286,10 +286,7 @@
             <a href="#process-manual-card-entry" class="toc-h1 toc-link" data-title="Process Manual Card Entry">Process Manual Card Entry</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#description" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Description</a>
-                  </li>
-                  <li>
-                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Required Objects</a>
+                    <a href="#required-objects-for-manually-entered-transaction" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Required Objects for Manually Entered Transaction</a>
                   </li>
               </ul>
           </li>
@@ -297,10 +294,7 @@
             <a href="#process-cash-transaction" class="toc-h1 toc-link" data-title="Process Cash Transaction">Process Cash Transaction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#description" class="toc-h2 toc-link" data-title="Process Cash Transaction">Description</a>
-                  </li>
-                  <li>
-                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Process Cash Transaction">Required Objects</a>
+                    <a href="#required-objects-for-cash-transaction" class="toc-h2 toc-link" data-title="Process Cash Transaction">Required Objects for Cash Transaction</a>
                   </li>
               </ul>
           </li>
@@ -308,10 +302,7 @@
             <a href="#setting-the-environment" class="toc-h1 toc-link" data-title="Setting the Environment">Setting the Environment</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#description" class="toc-h2 toc-link" data-title="Setting the Environment">Description</a>
-                  </li>
-                  <li>
-                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Setting the Environment">Required Objects</a>
+                    <a href="#required-objects-for-environment" class="toc-h2 toc-link" data-title="Setting the Environment">Required Objects for Environment</a>
                   </li>
               </ul>
           </li>
@@ -319,10 +310,7 @@
             <a href="#building-a-debit-credit-transaction" class="toc-h1 toc-link" data-title="Building a Debit/Credit Transaction">Building a Debit/Credit Transaction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#description" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Description</a>
-                  </li>
-                  <li>
-                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Required Objects</a>
+                    <a href="#required-objects-for-transactions" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Required Objects for Transactions</a>
                   </li>
                   <li>
                     <a href="#initialize-the-card-reader" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Initialize the Card Reader</a>
@@ -345,7 +333,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1><h2 id='what-is-the-mpos-emv-sdk'>What is the mPOS EMV SDK?</h2>
-<p>The mPOS EMV SDK is a native Android SDK which provides integration with the range of G-series and RP-series mPOS card readers as well as integration with the EMV Gateway. By managing the end-to-end transaction from card insertion all the way to the certified gateway, the SDK employs a semi-integrated approach and is able to keep the mobile application out of scope for EMV certification and reduce PCI scope. Additionally, the SDK manages the lower level back and forth communication required for an EMV transaction, simplifying the integration.
+<p>The mPOS EMV SDK is a native SDK which provides integration with the range of G-series and RP-series mPOS card readers as well as integration with the EMV Gateway. By managing the end-to-end transaction from card insertion all the way to the certified gateway, the SDK employs a semi-integrated approach and is able to keep the mobile application out of scope for EMV certification and reduce PCI scope. Additionally, the SDK manages the lower level back and forth communication required for an EMV transaction, simplifying the integration.
 The mPOS EMV SDK isolates the transaction processing, reader management, reporting service and user management services from the User Interface.  Because of that, if the app needs to support new devices or backend processors, clients don’t have to redo the app.  Updates to the SDK will provide the client with components to support any future changes in functionality such as adding additional mPOS card readers or transaction types. </p>
 
 <p>Our EMV gateway in always improving, and we are continually adding supported processors to our gateway to enhance our functionality and marketability. </p>
@@ -563,7 +551,7 @@ The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the
 <pre class="highlight java tab-java"><code>
 <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">user</span><span class="o">().</span><span class="na">login</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">,</span> <span class="k">new</span> <span class="n">LoginCallbackImpl</span><span class="o">());</span>
 
-</code></pre><h1 id='process-manual-card-entry'>Process Manual Card Entry</h1><h3 id='description'>Description</h3>
+</code></pre><h1 id='process-manual-card-entry'>Process Manual Card Entry</h1>
 <p>This section describes how to process a credit card by manually keying in the card information to include:</p>
 
 <ol>
@@ -573,7 +561,7 @@ The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the
 </ol>
 
 <p>The method in which you input the above information is completely up to you. The most common way is to have an on-screen number pad to type in the numbers. Processing credit cards manually is also an optional functionality for your application. If you do not plan on allowing your merchants to accept payment by manually entering a card number, then skip to section the next section &quot;Processing Cash Transactions&quot;.</p>
-<h3 id='required-objects'>Required Objects</h3>
+<h3 id='required-objects-for-manually-entered-transaction'>Required Objects for Manually Entered Transaction</h3>
 <blockquote>
 <p>Code Example</p>
 </blockquote>
@@ -623,10 +611,10 @@ The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the
 <td>TBI -- set as null</td>
 </tr>
 </tbody></table>
-<h1 id='process-cash-transaction'>Process Cash Transaction</h1><h3 id='description'>Description</h3>
+<h1 id='process-cash-transaction'>Process Cash Transaction</h1>
 <p>In certain payment scenarios, you may need to split the transaction into multiple pieces. One piece will be paid in credit while another is paid in cash. Our SDK also allows you to process a cash transaction if you wish to keep all payment activity within one application and management system.
 The ability to process a cash transaction is completely optional. You do not have to implement the ability to process a cash transaction if your application on payment model does not involve cash as a form of payment. If this is the case, you can skip to the next section, &quot;Setting the Environment.&quot;</p>
-<h3 id='required-objects'>Required Objects</h3>
+<h3 id='required-objects-for-cash-transaction'>Required Objects for Cash Transaction</h3>
 <blockquote>
 <p>Code Example</p>
 </blockquote>
@@ -671,7 +659,7 @@ The ability to process a cash transaction is completely optional. You do not hav
 <td>TBI -- set as null</td>
 </tr>
 </tbody></table>
-<h1 id='setting-the-environment'>Setting the Environment</h1><h3 id='description'>Description</h3>
+<h1 id='setting-the-environment'>Setting the Environment</h1>
 <blockquote>
 <p>To set a single allowable device type, you will need to make the following method call:</p>
 </blockquote>
@@ -696,7 +684,7 @@ The ability to process a cash transaction is completely optional. You do not hav
 </code></pre>
 <p>This section will cover the basics if you want to begin using a card reader to accept transactions. When an Ingenico card reader is plugged into your mobile device, the SDK cycles through a list to determine what kind of card reader was plugged in. The list that it searches through is appended by calling the setDeviceType() or setDeviceTypes() method calls, as shown in the code example.
 Once the SDK cycles through this list, it checks to ensure that there is a match. The SDK reads through the list in an organized manner, meaning the first item added is the first type of device checked. It is recommended to append items to this list depending on what card readers are most commonly used.</p>
-<h3 id='required-objects'>Required Objects</h3>
+<h3 id='required-objects-for-environment'>Required Objects for Environment</h3>
 <table><thead>
 <tr>
 <th>Object Name</th>
@@ -719,11 +707,11 @@ Once the SDK cycles through this list, it checks to ensure that there is a match
 <aside class="notice">
 For a full list of card readers for the DeviceType class, refer to the Supported Readers section. 
 </aside>
-<h1 id='building-a-debit-credit-transaction'>Building a Debit/Credit Transaction</h1><h3 id='description'>Description</h3>
+<h1 id='building-a-debit-credit-transaction'>Building a Debit/Credit Transaction</h1>
 <p>The process in which you make the method calls to make a debit or credit transaction is nearly identical with only the method name differentiating the two processes.</p>
 
 <p>You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.</p>
-<h3 id='required-objects'>Required Objects</h3>
+<h3 id='required-objects-for-transactions'>Required Objects for Transactions</h3>
 <table><thead>
 <tr>
 <th>Object Name</th>

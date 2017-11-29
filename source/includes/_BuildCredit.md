@@ -1,13 +1,11 @@
 # Building a Debit/Credit Transaction
-
-### Description 
   
 The process in which you make the method calls to make a debit or credit transaction is nearly identical with only the method name differentiating the two processes.
 
 You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.
 
 
-### Required Objects
+### Required Objects for Transactions
 
 Object Name | Object Type | Description
 --------- | ------- | ----------- | -----------

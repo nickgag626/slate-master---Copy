@@ -1,6 +1,5 @@
 # Process Manual Card Entry 
 
-### Description 
 This section describes how to process a credit card by manually keying in the card information to include:
 
 1. Credit Card Number
@@ -9,7 +8,7 @@ This section describes how to process a credit card by manually keying in the ca
 
 The method in which you input the above information is completely up to you. The most common way is to have an on-screen number pad to type in the numbers. Processing credit cards manually is also an optional functionality for your application. If you do not plan on allowing your merchants to accept payment by manually entering a card number, then skip to section the next section "Processing Cash Transactions".
 
-### Required Objects
+### Required Objects for Manually Entered Transaction
 >Code Example
 
   ```java

@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;json&quot;]">
+  <body class="index" data-languages="[&quot;java&quot;,&quot;swift&quot;,&quot;csharp&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,7 +211,9 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="json">json</a>
+              <a href="#" data-language-name="java">Android</a>
+              <a href="#" data-language-name="swift">iOS</a>
+              <a href="#" data-language-name="csharp">Windows</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -220,147 +222,118 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
-          </li>
-          <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#log-in-post" class="toc-h2 toc-link" data-title="Authentication">Log in (POST)</a>
+                    <a href="#what-is-the-mpos-emv-sdk" class="toc-h2 toc-link" data-title="Introduction">What is the mPOS EMV SDK?</a>
                   </li>
                   <li>
-                    <a href="#refresh-a-session-put" class="toc-h2 toc-link" data-title="Authentication">Refresh a Session (PUT)</a>
+                    <a href="#what-is-included-in-the-sdk" class="toc-h2 toc-link" data-title="Introduction">What is included in the SDK?</a>
                   </li>
                   <li>
-                    <a href="#logout-delete" class="toc-h2 toc-link" data-title="Authentication">Logout (DELETE)</a>
+                    <a href="#supported-readers" class="toc-h2 toc-link" data-title="Introduction">Supported Readers</a>
+                  </li>
+                  <li>
+                    <a href="#breakdown-of-the-ingenico-mpos-emv-sdk" class="toc-h2 toc-link" data-title="Introduction">Breakdown of the Ingenico mPOS EMV SDK</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#authorization" class="toc-h1 toc-link" data-title="Authorization">Authorization</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#processing-transactions" class="toc-h2 toc-link" data-title="Authorization">Processing Transactions</a>
+                    <a href="#developer-portal" class="toc-h2 toc-link" data-title="Getting Started">Developer Portal</a>
+                  </li>
+                  <li>
+                    <a href="#supported-devices" class="toc-h2 toc-link" data-title="Getting Started">Supported Devices</a>
+                  </li>
+                  <li>
+                    <a href="#unsupported-devices" class="toc-h2 toc-link" data-title="Getting Started">Unsupported Devices</a>
+                  </li>
+                  <li>
+                    <a href="#javadoc-resource" class="toc-h2 toc-link" data-title="Getting Started">JavaDoc Resource</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#transactions" class="toc-h1 toc-link" data-title="Transactions">Transactions</a>
+            <a href="#setup" class="toc-h1 toc-link" data-title="Setup">Setup</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#record-a-cash-transaction" class="toc-h2 toc-link" data-title="Transactions">Record a Cash Transaction</a>
+                    <a href="#integrate-the-aar-file" class="toc-h2 toc-link" data-title="Setup">Integrate the .aar File</a>
                   </li>
                   <li>
-                    <a href="#get-a-transaction" class="toc-h2 toc-link" data-title="Transactions">Get a Transaction</a>
+                    <a href="#api-key" class="toc-h2 toc-link" data-title="Setup">API key</a>
                   </li>
                   <li>
-                    <a href="#transaction-history" class="toc-h2 toc-link" data-title="Transactions">Transaction History</a>
+                    <a href="#point-to-ingenico-payment-server" class="toc-h2 toc-link" data-title="Setup">Point to Ingenico Payment Server</a>
                   </li>
                   <li>
-                    <a href="#send-email-receipt" class="toc-h2 toc-link" data-title="Transactions">Send Email Receipt</a>
+                    <a href="#set-the-client-version" class="toc-h2 toc-link" data-title="Setup">Set the Client Version</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+            <a href="#initialize-and-login" class="toc-h1 toc-link" data-title="Initialize and Login">Initialize and Login</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#retrieve-user-information" class="toc-h2 toc-link" data-title="Users">Retrieve User Information</a>
+                    <a href="#initialize" class="toc-h2 toc-link" data-title="Initialize and Login">Initialize</a>
                   </li>
                   <li>
-                    <a href="#get-username-availability" class="toc-h2 toc-link" data-title="Users">Get Username Availability</a>
-                  </li>
-                  <li>
-                    <a href="#update-user-details" class="toc-h2 toc-link" data-title="Users">Update User Details</a>
-                  </li>
-                  <li>
-                    <a href="#forgot-password" class="toc-h2 toc-link" data-title="Users">Forgot Password</a>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Initialize and Login">Login</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#packages" class="toc-h1 toc-link" data-title="Packages">Packages</a>
+            <a href="#process-manual-card-entry" class="toc-h1 toc-link" data-title="Process Manual Card Entry">Process Manual Card Entry</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-eligible-pricing-packages" class="toc-h2 toc-link" data-title="Packages">Get Eligible Pricing Packages</a>
+                    <a href="#description" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Description</a>
+                  </li>
+                  <li>
+                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Required Objects</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#profiles" class="toc-h1 toc-link" data-title="Profiles">Profiles</a>
+            <a href="#process-cash-transaction" class="toc-h1 toc-link" data-title="Process Cash Transaction">Process Cash Transaction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#retrieve-eligible-profiles" class="toc-h2 toc-link" data-title="Profiles">Retrieve Eligible Profiles</a>
+                    <a href="#description" class="toc-h2 toc-link" data-title="Process Cash Transaction">Description</a>
+                  </li>
+                  <li>
+                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Process Cash Transaction">Required Objects</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#organization" class="toc-h1 toc-link" data-title="Organization">Organization</a>
+            <a href="#setting-the-environment" class="toc-h1 toc-link" data-title="Setting the Environment">Setting the Environment</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#boarding-a-merchant" class="toc-h2 toc-link" data-title="Organization">Boarding a Merchant</a>
+                    <a href="#description" class="toc-h2 toc-link" data-title="Setting the Environment">Description</a>
                   </li>
                   <li>
-                    <a href="#uodate-organization-billing-information" class="toc-h2 toc-link" data-title="Organization">Uodate Organization Billing Information</a>
+                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Setting the Environment">Required Objects</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#merchants" class="toc-h1 toc-link" data-title="Merchants">Merchants</a>
+            <a href="#building-a-debit-credit-transaction" class="toc-h1 toc-link" data-title="Building a Debit/Credit Transaction">Building a Debit/Credit Transaction</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#retrieve-merchant-information" class="toc-h2 toc-link" data-title="Merchants">Retrieve Merchant Information</a>
+                    <a href="#description" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Description</a>
+                  </li>
+                  <li>
+                    <a href="#required-objects" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Required Objects</a>
+                  </li>
+                  <li>
+                    <a href="#initialize-the-card-reader" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Initialize the Card Reader</a>
+                  </li>
+                  <li>
+                    <a href="#setup-the-card-reader" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Setup the Card Reader</a>
+                  </li>
+                  <li>
+                    <a href="#process-credit-sale-transaction" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Process Credit Sale Transaction</a>
                   </li>
               </ul>
-          </li>
-          <li>
-            <a href="#reference-information" class="toc-h1 toc-link" data-title="Reference Information">Reference Information</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#http-status-codes" class="toc-h2 toc-link" data-title="Reference Information">HTTP Status Codes</a>
-                  </li>
-                  <li>
-                    <a href="#error-response-json-format" class="toc-h2 toc-link" data-title="Reference Information">Error Response JSON Format</a>
-                  </li>
-                  <li>
-                    <a href="#error-types" class="toc-h2 toc-link" data-title="Reference Information">Error Types</a>
-                  </li>
-                  <li>
-                    <a href="#error-response-json-format-2" class="toc-h2 toc-link" data-title="Reference Information">Error Response JSON Format</a>
-                  </li>
-                  <li>
-                    <a href="#error-codes" class="toc-h2 toc-link" data-title="Reference Information">Error Codes</a>
-                  </li>
-                  <li>
-                    <a href="#transaction-codes" class="toc-h2 toc-link" data-title="Reference Information">Transaction Codes</a>
-                  </li>
-                  <li>
-                    <a href="#pos-entry-modes" class="toc-h2 toc-link" data-title="Reference Information">POS Entry Modes</a>
-                  </li>
-                  <li>
-                    <a href="#pos-capabilities" class="toc-h2 toc-link" data-title="Reference Information">POS Capabilities</a>
-                  </li>
-                  <li>
-                    <a href="#pos-types" class="toc-h2 toc-link" data-title="Reference Information">POS Types</a>
-                  </li>
-                  <li>
-                    <a href="#reversal-reasons" class="toc-h2 toc-link" data-title="Reference Information">Reversal Reasons</a>
-                  </li>
-                  <li>
-                    <a href="#fallback-reasons" class="toc-h2 toc-link" data-title="Reference Information">Fallback Reasons</a>
-                  </li>
-                  <li>
-                    <a href="#pos-entry-sources" class="toc-h2 toc-link" data-title="Reference Information">POS Entry Sources</a>
-                  </li>
-                  <li>
-                    <a href="#card-presentment-codes" class="toc-h2 toc-link" data-title="Reference Information">Card Presentment Codes</a>
-                  </li>
-                  <li>
-                    <a href="#tokenization-object-properties" class="toc-h2 toc-link" data-title="Reference Information">Tokenization Object Properties</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </div>
         <ul class="toc-footer">
@@ -371,607 +344,488 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
+        <h1 id='introduction'>Introduction</h1><h2 id='what-is-the-mpos-emv-sdk'>What is the mPOS EMV SDK?</h2>
+<p>The mPOS EMV SDK is a native Android SDK which provides integration with the range of G-series and RP-series mPOS card readers as well as integration with the EMV Gateway. By managing the end-to-end transaction from card insertion all the way to the certified gateway, the SDK employs a semi-integrated approach and is able to keep the mobile application out of scope for EMV certification and reduce PCI scope. Additionally, the SDK manages the lower level back and forth communication required for an EMV transaction, simplifying the integration.
+The mPOS EMV SDK isolates the transaction processing, reader management, reporting service and user management services from the User Interface.  Because of that, if the app needs to support new devices or backend processors, clients don’t have to redo the app.  Updates to the SDK will provide the client with components to support any future changes in functionality such as adding additional mPOS card readers or transaction types. </p>
+
+<p>Our EMV gateway in always improving, and we are continually adding supported processors to our gateway to enhance our functionality and marketability. </p>
+
+<p>The integration of the mPOS EMV SDK with an existing application allows an end-user to easily accept and process credit card payments, including EMV Contact, EMV Contactless and Magnetic Card Swipe transactions. </p>
+<h2 id='what-is-included-in-the-sdk'>What is included in the SDK?</h2>
+<ul>
+<li><strong>A developer friendly toolkit</strong>, including Android/iOS libraries, SDK documentation, sample code, and test applications;</li>
+<li><strong>A wide range of EMV-ready card readers</strong>, with support for EMV chip &amp; sign, EMV chip &amp; PIN, NFC, and magstripe in a variety of form factors;</li>
+<li><strong>An EMV gateway</strong>, with connections to all major processors in the U.S., thus offering ISVs and their customers the flexibility to use the processor of their choice; and</li>
+<li><strong>A future-proof solution</strong>, offering the ability to easily upgrade to new Ingenico Mobile Solutions readers as they emerge or support additional processors without having to re-certify.</li>
+</ul>
+<h2 id='supported-readers'>Supported Readers</h2>
+<p>Once fully integrated with the SDK, customers will be able to seamlessly process payments using one of Ingenico’s many mobile card readers, which connect directly to a merchant’s mobile device. Ingenico offers a variety of card readers, giving customers the ability to choose one that best suits their needs without additional integration work. 
+Customers will be able to accept EMV payments from any of the RP-reader series, which includes:</p>
+
+<table><thead>
+<tr>
+<th>Reader</th>
+<th>Payment Type Accepted</th>
+<th>Supported Communication Interfaces</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RP350</td>
+<td>EMV Chip &amp; Sign, MSR Mobile Card Reader</td>
+<td>Audio Jack</td>
+</tr>
+<tr>
+<td>RP450</td>
+<td>SR NFC, EMV NFC, EMV Chip &amp; Sign, MSR Mobile Card Reader</td>
+<td>Bluetooth, Audio Jack</td>
+</tr>
+<tr>
+<td>RP750</td>
+<td>MSR NFC, MSR EMV, EMV Chip &amp; Pin, PIN Debit</td>
+<td>Bluetiith, Audio Jack</td>
+</tr>
+<tr>
+<td>MOBY/3000</td>
+<td>MSR MSR EMV, EMV Chip &amp; Pin, PIN Debit, MSR Mobile Card Reader</td>
+<td>Bluetooth, (USB for Android only)</td>
+</tr>
+<tr>
+<td>MOBY/8500</td>
+<td>MSR NFC, MSR EMV, EMV Chip &amp; Pin, PIN Debit</td>
+<td>Bluetooth</td>
+</tr>
+</tbody></table>
+<h2 id='breakdown-of-the-ingenico-mpos-emv-sdk'>Breakdown of the Ingenico mPOS EMV SDK</h2>
+<p>The Ingenico mPOS EMV SDK includes four components:</p>
+
+<p><strong>Ingenico</strong> 
+<br/>The Ingenico class serves as the entry-point to the mPOS SDK. The APIs included will aid in initializing the project, as well as return the necessary information needed to begin processing transactions and managing devices. </p>
+
+<p><strong>Payment</strong> 
+<br/>Payment provides APIs to accept credit / debit payments through Ingenico Mobile card readers, manually entered credit card payments as well as cash payments. These APIs include the business logic to drive a credit / debit transaction through Ingenico Mobile card readers and Ingenico gateway, hiding the different steps involved in processing a card payment..</p>
+
+<p><strong>Payment Device Abstraction Layer</strong>
+<br/>Payment Device provides the APIs required to setup card readers to be used for accepting payments, as well as retrieve all connection status updates.</p>
+
+<p><strong>User</strong>
+User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.</p>
+<h1 id='getting-started'>Getting Started</h1>
+<p>The new mPOS EMV SDK will be available to clients who register through the <a href="http://developer.ingenico.us">Ingenico Developer Portal</a>. Once you have obtained credentials for the portal, navigate to the Software tab on the banner and download the SDK package. </p>
+<h2 id='developer-portal'>Developer Portal</h2>
+<p>The Ingenico Developer Portal serves as a distribution channel for our mPOS SDK material, as well as a collaborative environment for third-party developers to get the support they need for their projects and applications. </p>
+
+<p><br/>A request for an account can be made at (http://developer.ingenico.us), and will be reviewed by the internal Ingenico team before an account is activated. (Note: This allows creation of a user account only, therefore each user (Developer) for an ISV will need to register and create their own account.)</p>
+
+<p><br/>Once approved, an NDA will be executed and a new client/customer record will be created in the portal for future portal notifications, updates, and any other changes.</p>
+
+<p><br/>Existing clients who utilize the ROAMpay API or who are clients for RUA or another API product through Netsuite, will be asked to register on the developer portal in order to access the new mPOS EMV SDK.</p>
+<h2 id='supported-devices'>Supported Devices</h2>
+<p>For a list of supported devices, please reference the <a href="http://mobile-solutions.ingenico.com/device-compatibility/">Ingenico Device Compatability page</a> </p>
+<h2 id='unsupported-devices'>Unsupported Devices</h2>
+<p>At Ingenico Mobile Solutions, we attempt to support as wide of a variety of mobile devices as possible. If a device is not found on our list of compatible devices, the mPOS SDK will attempt to establish communication between the card reader and mobile device through default settings dependent on the mobile device manufacturer and model. If communication still cannot be established, then the methods below can be attempted that may be able to establish the connection between card reader and mobile device.</p>
+
+<p>Contact Technical Support
+If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:</p>
+
+<ul>
+<li>At least one available support block on your Ingenico Mobile Solutions account
+
+<ul>
+<li>You will need one support block for every mobile device that is incompatible.</li>
+<li>Your support block will be refunded if we are unable to provide compatibility and support for the requested mobile device.</li>
+</ul></li>
+<li>Mobile device manufacturer</li>
+<li>Exact model of the device</li>
+<li>Android version being tested on</li>
+<li>Parameters retrieved from the calibration tool (if any)</li>
+<li>If the issue is present on audio jack, Bluetooth, or both</li>
+</ul>
+
+<p>Once we receive all the information, our support staff will queue the issue to our engineers. You will be provided a case number and updated regularly on the issue and it’s progress. The time it takes to add support for mobile devices vary from device to device. Some mobile devices can be added on the same day and some may take several days to complete. During this time, if you have any questions, feel free to ask any of the support staff. If you the inquiry is urgent, please also include the SDK Product Manager as a CC. </p>
+<h2 id='javadoc-resource'>JavaDoc Resource</h2>
+<p>The SDK comes with an included Javadoc resource which contains information regarding all API classes, methods, exceptions, and other definitions. The Javadoc can be found in the <strong>\libs</strong> folder of the SDK package that was downloaded. The filename for the Javadoc resource is as follows: <strong>ingenico-mpos-sdk- v1.X.X-javadoc.jar</strong>. In order to properly open the Javadoc, please extract all contents within the jar file into a separate folder and locate the <strong>index.html</strong> file.</p>
+<h1 id='setup'>Setup</h1>
+<p>In order to have access to the SDK, you will need to integrate the .AAR file into your project. The
+.AAR file can be found within the Pilot package located on the developer portal’s Software page. 
+<aside class="warning">
+If you do not see the download available, please contact the Developer Portal support team for help in getting access to the files.
+</aside></p>
+<h2 id='integrate-the-aar-file'>Integrate the .aar File</h2>
+<p>To integrate the .aar file into your project, please follow the steps below:</p>
+
+<ul>
+<li>Copy the .aar file to your project
+
+<ul>
+<li>Download the mPOS EMV Android SDK from the developer portal</li>
+<li>Unzip the downloaded contents to a new file destination</li>
+<li>Open the unzipped folder contents in Windows Explorer</li>
+<li>Navigate to the /libs folder</li>
+<li>Copy the .aar file within the directory</li>
+<li>Navigate to your project’s /libs directory (typically located at: <project directory>/apps/libs)</li>
+<li>Paste the .aar file to your project’s /libs folder</li>
+</ul></li>
+</ul>
+
 <blockquote>
-<p>API Endpoint</p>
+<p>Insert this code into the dependencies section:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">https</span><span class="p">:</span><span class="c1">//roamdata.com</span>
+<pre class="highlight java tab-java"><code>
+  <span class="n">compile</span> <span class="err">'</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="nl">design:</span><span class="o">&lt;</span><span class="n">design</span> <span class="n">version</span><span class="o">&gt;</span><span class="err">'</span>
+
 </code></pre>
-<p>The Ingenico WSAPI is a set of REST APIs designed to be consumed by API customers for interaction with our Mobile Commerce Manager. This allows customers availability to all of the features that we offer for accepting payments, as well as everything else required for end-end transaction processing</p>
-<h1 id='authentication'>Authentication</h1>
-<p>Authenticate your account by including your Application Token in the request field <code>X-Roam-Key</code>. If the credentials and token are valid, the API will return a response with the necessary session token information. This session tken can be used for accessing other APIs available within our library. </p>
+<ul>
+<li><p><strong>Update the build.gradle file</strong></p>
 
+<ul>
+<li>Open your Android project</li>
+<li>Navigate and open the build.gradle (Module.app) file</li>
+<li>Insert the code in the right-hand column into the dependencies section where:</li>
+<li><strong><design version></strong> is the design support library you want to use. The latest version can be found <a href="http://developer.android.com/tools/support-%20library/features.html">here</a></li>
+<li><strong><file name></strong> is the name of the copied .aar file from Step 1. </li>
+<li>Copy the .aar file within the directory</li>
+<li>Navigate to your project’s /libs directory (typically located at: <project directory>/apps/libs)</li>
+<li>Paste the .aar file to your project’s /libs folder</li>
+</ul></li>
+<li><p><strong>Update the targetSDKVersion</strong> (optional)</p>
+
+<ul>
+<li>Open your Android project</li>
+<li>Navigate and open the build.gradle (Module.app) file</li>
+<li>Change the targetSDKversion parameter within the defaultConfig section to 21.</li>
+</ul></li>
+</ul>
+
+<p><aside class="warning">
+The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
+</aside></p>
+<h2 id='api-key'>API key</h2>
 <blockquote>
-<p>You will receive a session token by logging in</p>
+<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
 </blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">API_KEY</span> <span class="o">=</span> <span class="s">"RC46-d78d2d37-f7b7-40c9-bf3g-9ecd05cdc562"</span><span class="o">;</span>
+<span class="c1">//The string above is only an example and will not work in a live environment</span>
 
-<p>Ingenico uses API keys to allow access to the API. You can register a new API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<aside class="warning">Please replace <code>X-Roam-Key</code> in the header with your API Key.</aside>
-<h2 id='log-in-post'>Log in (POST)</h2>
-<blockquote>
-<p>URL</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
 
 </code></pre>
-<p>First, you must log in to your account using your Application Token and assigned credentials. As stated earlier, this will return your session token along with other various user settings.</p>
-<h3 id='headers'>Headers</h3>
+<p>You will need to have an API key that will be used as an authentication measure in order to use the SDK. If you have not received your API key, please contact mPOS SDK support team to have one assigned. It is recommended that you create a constant string variable that holds your API key. In your <strong>MainActivity.java</strong> file, add the constant variable as shown to the right. </p>
+<h2 id='point-to-ingenico-payment-server'>Point to Ingenico Payment Server</h2>
 <blockquote>
-<p>Header</p>
+<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
-<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
+<pre class="highlight java tab-java"><code>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">DEFAULT_BASE_URL</span> <span class="o">=</span> <span class="s">"https://uatmcm.roamdata.com/"</span><span class="o">;</span>
+
+
+</code></pre>
+<p>Another constant string variable should be created, which contains the URL to the Ingenico Payment Server. This will also be needed in order to make function calls. In your MainActivity.java file, add the constant variable as shown to the right:</p>
+<h2 id='set-the-client-version'>Set the Client Version</h2>
+<blockquote>
+<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">CLIENT_VERSION</span> <span class="o">=</span> <span class="s">"0.1"</span><span class="o">;</span>
+
+
+</code></pre>
+<p>In addition to the payment server and API key, you will also need to set the Client Version through a constant variable. In your MainActivity.java file, add the constant variable as shown below:</p>
+<h1 id='initialize-and-login'>Initialize and Login</h1><h2 id='initialize'>Initialize</h2><pre class="highlight java tab-java"><code>
+<span class="c1">//Example initiating the Ingenico object</span>
+<span class="n">Ingenico</span> <span class="n">ingenico</span> <span class="o">=</span> <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span><span class="n">URL</span><span class="o">,</span> <span class="n">API_KEY</span><span class="o">,</span> <span class="n">CLIENT_VERSION</span><span class="o">);</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">setLogging</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+<span class="c1">//Example calling the method directly </span>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span><span class="n">URL</span><span class="o">,</span> <span class="n">API_KEY</span><span class="o">,</span> <span class="n">CLIENT_VERSION</span><span class="o">);</span> <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">setLogging</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+
+
+</code></pre>
+<p>In order to use the SDK, you will need to first initialize it. The syntax to initialize the SDK is shown to the right. The initialize method is available within the Ingenico instance object. The Ingenico object is a singleton class, so it can either be instantiated or called directly as shown.</p>
+<h2 id='login'>Login</h2><pre class="highlight java tab-java"><code>
+<span class="kd">private</span> <span class="kd">class</span> <span class="nc">LoginCallbackImpl</span> <span class="kd">implements</span> <span class="n">LoginCallback</span> <span class="o">{</span>
+   <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">,</span> <span class="n">UserProfile</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">//Login succeeded</span>
+      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="c1">//Login failed and the responseCode will indicate the error</span>
+      <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+
+
+</code></pre>
+<p>Once the SDK has been initialized, you will need to login and validate a user’s authenticity to use the application. It is recommended that the login functionality should be created using internal security procedures and guidelines. You will need to create the following class based off the abstract class, <strong>LoginCallback</strong>. </p>
+
+<blockquote>
+<p>Once the class has been implemented, you can then call the login method, as shown below, through an <strong>onClick</strong> event:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">user</span><span class="o">().</span><span class="na">login</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">,</span> <span class="k">new</span> <span class="n">LoginCallbackImpl</span><span class="o">());</span>
+
+</code></pre><h1 id='process-manual-card-entry'>Process Manual Card Entry</h1><h3 id='description'>Description</h3>
+<p>This section describes how to process a credit card by manually keying in the card information to include:</p>
+
+<ol>
+<li>Credit Card Number</li>
+<li>Expiration Date</li>
+<li>CVV2/CVC Code</li>
+</ol>
+
+<p>The method in which you input the above information is completely up to you. The most common way is to have an on-screen number pad to type in the numbers. Processing credit cards manually is also an optional functionality for your application. If you do not plan on allowing your merchants to accept payment by manually entering a card number, then skip to section the next section &quot;Processing Cash Transactions&quot;.</p>
+<h3 id='required-objects'>Required Objects</h3>
+<blockquote>
+<p>Code Example</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">CashSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CashSaleTransactionRequest</span><span class="o">(</span>
+<span class="n">card</span><span class="o">,</span> <span class="n">saleAmount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
+
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCashTransaction</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
+
 
 </code></pre>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Required</th>
+<th>Object Name</th>
+<th>Object Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>X-Roam-Key</td>
-<td>Yes</td>
-<td>Application token that identifies the request origin. This key is unique to every client, as well as every environment. Please contact API Support (APIsupport.us@ingenico.com) to get this key.</td>
+<td>card</td>
+<td>Card</td>
+<td>Credit card information</td>
 </tr>
 <tr>
-<td>X-Roam-ApiVersion</td>
-<td>Yes</td>
-<td>Version of the API being used (e.g. 6.0.0)</td>
+<td>saleAmount</td>
+<td>Amount</td>
+<td>Cost of the sale</td>
 </tr>
 <tr>
-<td>X-Roam-ClientVersion</td>
-<td>Yes</td>
-<td>Client version which can be vary by application. This is set by developers (e.g. 1.0.0)</td>
+<td>products</td>
+<td>List<Product></td>
+<td>List of the products</td>
 </tr>
 <tr>
-<td>Content-Type</td>
-<td>Yes</td>
-<td>Content type e.g. application/json</td>
+<td>gpsLongitude</td>
+<td>String</td>
+<td>The location’s longitude</td>
+</tr>
+<tr>
+<td>gpsLatitude</td>
+<td>String</td>
+<td>The location’s latitude</td>
+</tr>
+<tr>
+<td>transactionGroupID</td>
+<td>String</td>
+<td>TBI -- set as null</td>
 </tr>
 </tbody></table>
-
+<h1 id='process-cash-transaction'>Process Cash Transaction</h1><h3 id='description'>Description</h3>
+<p>In certain payment scenarios, you may need to split the transaction into multiple pieces. One piece will be paid in credit while another is paid in cash. Our SDK also allows you to process a cash transaction if you wish to keep all payment activity within one application and management system.
+The ability to process a cash transaction is completely optional. You do not have to implement the ability to process a cash transaction if your application on payment model does not involve cash as a form of payment. If this is the case, you can skip to the next section, &quot;Setting the Environment.&quot;</p>
+<h3 id='required-objects'>Required Objects</h3>
 <blockquote>
-<p>Request</p>
+<p>Code Example</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-  <span class="s2">"user_name"</span><span class="p">:</span><span class="s2">"myUserName"</span><span class="p">,</span>
-  <span class="s2">"password"</span><span class="p">:</span><span class="s2">"pwd123"</span>
-<span class="p">}</span>
+<pre class="highlight java tab-java"><code>
+<span class="n">CashSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CashSaleTransactionRequest</span><span class="o">(</span> <span class="n">amount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
 
-</code></pre><h3 id='input-parameters'>Input Parameters</h3>
-<p>Pass the following values in the request body to successfully log in. </p>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCashTransaction</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
 
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>user_name</td>
-<td>String</td>
-<td>Yes</td>
-<td>User&#39;s unique identifier</td>
-</tr>
-<tr>
-<td>password</td>
-<td>String</td>
-<td>Yes</td>
-<td>User&#39;s password</td>
-</tr>
-</tbody></table>
-<h3 id='response-parameters'>Response Parameters</h3>
-<p>If the request is successful, you should receive a request with the following objects defined. </p>
 
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-  <span class="s2">"chain_id"</span><span class="p">:</span> <span class="s2">"679"</span><span class="p">,</span>
-  <span class="s2">"store_id"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
-  <span class="s2">"terminal_id"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
-  <span class="s2">"organization_id"</span><span class="p">:</span> <span class="s2">"8"</span><span class="p">,</span>
-  <span class="s2">"organization_type"</span><span class="p">:</span> <span class="s2">"merchant"</span><span class="p">,</span>
-  <span class="s2">"processor"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Vantiv"</span><span class="p">,</span>
-    <span class="s2">"processor_profile"</span><span class="p">:</span> <span class="s2">"vantiv_profile1"</span><span class="p">,</span>
-    <span class="s2">"date_modified"</span><span class="p">:</span> <span class="s2">"20151113190112"</span>
-  <span class="p">},</span>
-  <span class="s2">"session"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"expires"</span><span class="p">:</span> <span class="s2">"20151222175141"</span><span class="p">,</span>
-    <span class="s2">"session_token"</span><span class="p">:</span> <span class="s2">"MCM6-fd55c7-7429-447c-9918-c80162574cdb"</span>
-  <span class="p">},</span>
-  <span class="s2">"user"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"user_name"</span><span class="p">:</span> <span class="s2">"myUserName"</span><span class="p">,</span>
-    <span class="s2">"bill_organization"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"is_admin"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"is_sys_admin"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"account_flags"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"change_email_required"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">"change_password_required"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">"change_security_questions_required"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">"accept_terms_and_conditions_required"</span><span class="p">:</span> <span class="kc">false</span>
-    <span class="p">},</span>
-    <span class="s2">"primary_email"</span><span class="p">:</span> <span class="s2">"myEmail@ingenico.com"</span><span class="p">,</span>
-    <span class="s2">"security_questions"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span>
-        <span class="s2">"answer"</span><span class="p">:</span> <span class="s2">"testAnswer"</span><span class="p">,</span>
-        <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"13"</span><span class="p">,</span>
-        <span class="s2">"question"</span><span class="p">:</span> <span class="s2">"What is the name of your favorite childhood friend?"</span>
-      <span class="p">},</span>
-      <span class="p">{</span>
-        <span class="s2">"answer"</span><span class="p">:</span> <span class="s2">"testAnswer"</span><span class="p">,</span>
-        <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"15"</span><span class="p">,</span>
-        <span class="s2">"question"</span><span class="p">:</span> <span class="s2">"What school did you attend for sixth grade?"</span>
-      <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="s2">"cell_phone"</span><span class="p">:</span> <span class="s2">"1151151155"</span><span class="p">,</span>
-    <span class="s2">"first_name"</span><span class="p">:</span> <span class="s2">"MyFirstName"</span><span class="p">,</span>
-    <span class="s2">"last_name"</span><span class="p">:</span> <span class="s2">"MyLastName"</span><span class="p">,</span>
-    <span class="s2">"locale"</span><span class="p">:</span> <span class="s2">"en-US"</span><span class="p">,</span>
-    <span class="s2">"middle_name_initial"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-    <span class="s2">"other_phone"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-    <span class="s2">"test_account"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
-    <span class="s2">"work_phone"</span><span class="p">:</span> <span class="s2">"1001001000"</span>
-  <span class="p">},</span>
-  <span class="s2">"configuration"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"account.locale.available_locales"</span><span class="p">:</span> <span class="s2">"en_US, en_CA"</span><span class="p">,</span>
-    <span class="s2">"account.permissions.add_submerchant.merchant_portal"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"account.permissions.allow_submerchants"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"account.permissions.change_address"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"account.permissions.change_name"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"account.permissions.edit_email_receipt"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"account.permissions.order_accessories.merchant_portal"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"branding.theme"</span><span class="p">:</span> <span class="s2">"default"</span><span class="p">,</span>
-    <span class="s2">"branding.theme.available_themes"</span><span class="p">:</span> <span class="s2">"default"</span><span class="p">,</span>
-    <span class="s2">"component.access.inventory_management"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"component.access.virtual_terminal"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.avs"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.avs.reverse_mismatch"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"processing.config.capture_signature"</span><span class="p">:</span> <span class="s2">"Optional"</span><span class="p">,</span>
-    <span class="s2">"processing.config.collect_geolocation"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.collect_optional_info"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.processor_profile"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">"processing.config.currency"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"USD"</span><span class="p">,</span>
-      <span class="s2">"iso"</span><span class="p">:</span> <span class="mi">840</span><span class="p">,</span>
-      <span class="s2">"symbol"</span><span class="p">:</span> <span class="s2">"$"</span>
-    <span class="p">},</span>
-    <span class="s2">"processing.config.cvv"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.cvv.reverse_mismatch"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"processing.config.discount"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.show_paper_receipt"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.small_ticket"</span><span class="p">:</span> <span class="s2">"Off"</span><span class="p">,</span>
-    <span class="s2">"processing.config.small_ticket.contactless"</span><span class="p">:</span> <span class="s2">"Off"</span><span class="p">,</span>
-    <span class="s2">"processing.config.small_ticket.contactless.max"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">"processing.config.small_ticket.max"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">"processing.config.tax"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.config.tax.default"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">"processing.config.tender_types"</span><span class="p">:</span> <span class="p">[</span>
-      <span class="s2">"Cash"</span><span class="p">,</span>
-      <span class="s2">"Card"</span>
-    <span class="p">],</span>
-    <span class="s2">"processing.config.tip"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.manual_entry"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.refund"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.refund.for_submerchant"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.refund.merchant_portal"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.refund.mobile"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.refund.smart_refund"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.permissions.void"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"processing.receipt.show_tax"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="s2">"security.session_timeout.mobile"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-    <span class="s2">"security.account_locking.count_memory"</span><span class="p">:</span> <span class="s2">"30"</span><span class="p">,</span>
-    <span class="s2">"security.account_locking.failed_attempts_limit"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s2">"security.account_locking.lockout_duration"</span><span class="p">:</span> <span class="mi">2</span>
-  <span class="p">}</span>
-<span class="p">}</span>
 
 </code></pre>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
+<th>Object Name</th>
+<th>Object Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>chainID</td>
+<td>amount</td>
+<td>Amount</td>
+<td>Cost of the sale</td>
+</tr>
+<tr>
+<td>products</td>
+<td>List<Product></td>
+<td>List of the products</td>
+</tr>
+<tr>
+<td>gpsLongitude</td>
 <td>String</td>
-<td>Yes</td>
-<td>Gateway identifier for specifying processor together with store_id.</td>
+<td>The location’s longitude</td>
 </tr>
 <tr>
-<td>store_id</td>
+<td>gpsLatitude</td>
 <td>String</td>
-<td>Yes</td>
-<td>Gateway identifier for specifying processor together with chain_id</td>
+<td>The location’s latitude</td>
 </tr>
 <tr>
-<td>terminal_id</td>
+<td>transactionGroupID</td>
 <td>String</td>
-<td>Yes</td>
-<td>MCM identifier for device.</td>
+<td>TBI -- set as null</td>
+</tr>
+</tbody></table>
+<h1 id='setting-the-environment'>Setting the Environment</h1><h3 id='description'>Description</h3>
+<blockquote>
+<p>To set a single allowable device type, you will need to make the following method call:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">DeviceType</span> <span class="n">deviceType</span> <span class="o">=</span> <span class="n">DeviceType</span><span class="o">.</span><span class="na">RP450c</span><span class="o">;</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">device</span><span class="o">().</span><span class="na">setDeviceType</span><span class="o">(</span><span class="n">deviceType</span><span class="o">);</span>
+
+</code></pre>
+<blockquote>
+<p>If you need to set multiple allowable device types, you will need to make the following method call:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">List</span><span class="o">&lt;</span><span class="n">DeviceType</span><span class="o">&gt;</span> <span class="n">audioJackDeviceTypes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+     <span class="o">{</span>
+        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">G4x</span><span class="o">);</span> 
+        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP450c</span><span class="o">);</span> 
+        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP350x</span><span class="o">);</span> 
+        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP170c</span><span class="o">);</span>
+     <span class="o">}</span>
+<span class="n">ingenico</span><span class="o">.</span><span class="na">device</span><span class="o">().</span><span class="na">setDeviceTypes</span><span class="o">(</span><span class="n">audioJackDeviceTypes</span><span class="o">);</span>
+
+
+</code></pre>
+<p>This section will cover the basics if you want to begin using a card reader to accept transactions. When an Ingenico card reader is plugged into your mobile device, the SDK cycles through a list to determine what kind of card reader was plugged in. The list that it searches through is appended by calling the setDeviceType() or setDeviceTypes() method calls, as shown in the code example.
+Once the SDK cycles through this list, it checks to ensure that there is a match. The SDK reads through the list in an organized manner, meaning the first item added is the first type of device checked. It is recommended to append items to this list depending on what card readers are most commonly used.</p>
+<h3 id='required-objects'>Required Objects</h3>
+<table><thead>
+<tr>
+<th>Object Name</th>
+<th>Object Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>deviceType</td>
+<td>DeviceType</td>
+<td>Type of card reader being used</td>
 </tr>
 <tr>
-<td>organization_id</td>
-<td>String</td>
-<td>Yes</td>
-<td>The ID of the user&#39;s parent organization.</td>
-</tr>
-<tr>
-<td>organization_type</td>
-<td>Organization Type</td>
-<td>Yes</td>
-<td>The type of the user&#39;s parent organization.</td>
-</tr>
-<tr>
-<td>processor</td>
-<td>Processor</td>
-<td>No</td>
-<td>Processor Information including name, profile name, etc.</td>
-</tr>
-<tr>
-<td>session</td>
-<td>Session</td>
-<td>Yes</td>
-<td>Session info including token and expiration information.</td>
-</tr>
-<tr>
-<td>user</td>
-<td>user</td>
-<td>Yes</td>
-<td>Information for the authenticated user.</td>
-</tr>
-<tr>
-<td>configuration</td>
-<td>List</td>
-<td>Yes</td>
-<td>Last login timestamp</td>
+<td>audioJackDeviceTypes</td>
+<td>List<DeviceType></td>
+<td>List of card reader types</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — This will return your session token!
+<aside class="notice">
+For a full list of card readers for the DeviceType class, refer to the Supported Readers section. 
 </aside>
-<h2 id='refresh-a-session-put'>Refresh a Session (PUT)</h2>
-<blockquote>
-<p>URL</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
+<h1 id='building-a-debit-credit-transaction'>Building a Debit/Credit Transaction</h1><h3 id='description'>Description</h3>
+<p>The process in which you make the method calls to make a debit or credit transaction is nearly identical with only the method name differentiating the two processes.</p>
 
-</code></pre>
-<p>This call is used to keep a logged-in session alive. This API method will refresh a valid session and extend the Session Token expiration time. </p>
-<h3 id='headers-2'>Headers</h3>
-<blockquote>
-<p>Header</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Key</span><span class="p">:</span> <span class="s2">"APP6-54a59a59ea7-7440-4f8b-ae96-ffba2e801391"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
-<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
-
-</code></pre>
-<aside class="notice">Please replace <code>X-Roam-Key</code> (in the header) with your session token returned from Login.</aside>
-
+<p>You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.</p>
+<h3 id='required-objects'>Required Objects</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Required</th>
+<th>Object Name</th>
+<th>Object Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>X-Roam-Key</td>
-<td>Yes</td>
-<td>Application token that identifies the request origin. This key is unique to every client, as well as every environment. Please contact API Support (APIsupport.us@ingenico.com) to get this key.</td>
+<td>card</td>
+<td>Card</td>
+<td>Credit card information</td>
 </tr>
 <tr>
-<td>X-Roam-ApiVersion</td>
-<td>Yes</td>
-<td>Version of the API being used (e.g. 6.0.0)</td>
+<td>saleAmount</td>
+<td>Amount</td>
+<td>Cost of the sale</td>
 </tr>
 <tr>
-<td>X-Roam-ClientVersion</td>
-<td>Yes</td>
-<td>Client version which can be vary by application. This is set by developers (e.g. 1.0.0)</td>
+<td>products</td>
+<td>List<Product></td>
+<td>List of the products</td>
 </tr>
 <tr>
-<td>Content-Type</td>
-<td>Yes</td>
-<td>Content type e.g. application/json</td>
+<td>gpsLongitude</td>
+<td>String</td>
+<td>The location’s longitude</td>
 </tr>
-</tbody></table>
-
-<blockquote>
-<p>Request</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-
-</span></code></pre><h3 id='input-parameters-2'>Input Parameters</h3>
-<p>A request body is not needed to refresh a session. </p>
-
-<table><thead>
 <tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
+<td>gpsLatitude</td>
+<td>String</td>
+<td>The location’s latitude</td>
 </tr>
-</thead><tbody>
 <tr>
-<td>N/A</td>
-<td></td>
-<td></td>
+<td>transactionGroupID</td>
+<td>String</td>
+<td>TBI -- set as null</td>
+</tr>
+<tr>
+<td>Context</td>
+<td>Android Context</td>
 <td></td>
 </tr>
 </tbody></table>
-
+<h3 id='initialize-the-card-reader'>Initialize the Card Reader</h3>
 <blockquote>
-<p>Response:</p>
+<p>As mentioned, after setting the environment, you will want to connect the card reader. Once the card reader is connected via audio jack, make the following call:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-  <span class="s2">"chain_id"</span><span class="p">:</span> <span class="s2">"679"</span><span class="p">,</span>
-  <span class="s2">"store_id"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
-  <span class="s2">"terminal_id"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
-  <span class="s2">"organization_type"</span><span class="p">:</span> <span class="s2">"merchant"</span><span class="p">,</span>
-  <span class="s2">"session"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"expires"</span><span class="p">:</span> <span class="s2">"20151222175141"</span><span class="p">,</span>
-    <span class="s2">"session_token"</span><span class="p">:</span> <span class="s2">"MCM6-420ba742-ee06-401a-b1a6-0f6054a3e20d"</span>
-  <span class="p">},</span>
-  <span class="s2">"user"</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">"user_name"</span><span class="p">:</span> <span class="s2">"myUserName"</span><span class="p">,</span>
-    <span class="s2">"is_admin"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"is_sys_admin"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="s2">"test_account"</span><span class="p">:</span> <span class="kc">false</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-</code></pre><h3 id='response-parameters-2'>Response Parameters</h3>
-<p>If your request is successful, you will receive a response with the following objects defined:</p>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>chainID</td>
-<td>String</td>
-<td>Yes</td>
-<td>Gateway identifier for specifying processor together with store_id.</td>
-</tr>
-<tr>
-<td>store_id</td>
-<td>String</td>
-<td>Yes</td>
-<td>Gateway identifier for specifying processor together with chain_id</td>
-</tr>
-<tr>
-<td>terminal_id</td>
-<td>String</td>
-<td>Yes</td>
-<td>MCM identifier for device.</td>
-</tr>
-<tr>
-<td>organization_type</td>
-<td>Organization Type</td>
-<td>Yes</td>
-<td>The type of the user&#39;s parent organization.</td>
-</tr>
-<tr>
-<td>user</td>
-<td>user</td>
-<td>Yes</td>
-<td>Information for the authenticated user.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">HTTP Status code: 200 OK denotes success</aside>
-<h2 id='logout-delete'>Logout (DELETE)</h2>
-<blockquote>
-<p>URL</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="p">[</span><span class="nx">domain</span><span class="p">]</span><span class="o">/</span><span class="nx">wsapi</span><span class="o">/</span><span class="nx">Authentication</span><span class="o">/</span>
+<pre class="highlight java tab-java"><code>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 
 </code></pre>
-<p>This call is used to log the user out of an active session, invalidating the existing session token. </p>
+<p>This method calls initializes the card reader to work with the device. In order to get the initialize command to successfully run, you will need to ensure that your application has audio permissions.</p>
 
+<p>Once the initialize command is run, it will iterate through your selected device types that have been set in section 7. This process can take several seconds and up to a minute. In order to reduce the time the initialize process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.</p>
+<h3 id='setup-the-card-reader'>Setup the Card Reader</h3>
 <blockquote>
-<p>Header</p>
+<p>Setup the PublicKeys and ApplicationIDs to the connected reader:</p>
 </blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">Token</span><span class="p">:</span> <span class="s2">"MCM6-420ba742-ee06-401a-b1a6-0f6054a3e20d"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ApiVersion</span><span class="p">:</span> <span class="s2">"6.0.0"</span>
-<span class="nx">X</span><span class="o">-</span><span class="nx">Roam</span><span class="o">-</span><span class="nx">ClientVersion</span><span class="p">:</span> <span class="s2">"1.0.0"</span>
-<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="p">:</span> <span class="s2">"application/json"</span>
+<pre class="highlight java tab-java"><code>
+<span class="k">if</span><span class="o">(</span><span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">isSetupRequired</span><span class="o">()){</span> 
+     <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">setup</span><span class="o">(</span><span class="k">new</span> 
+     <span class="n">DeviceSetupCallbackImpl</span><span class="o">());</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">DeviceSetupCallbackImpl</span> <span class="kd">implements</span> <span class="n">DeviceSetupCallback</span><span class="o">{</span>
+     <span class="nd">@Override</span>
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
+         <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
+             <span class="c1">//Implement the success logic</span>
+         <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+              <span class="c1">//Implement the failure logic - code in the response will indicates the reason*/</span>
+         <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+<p>Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The setup method sets the PublicKeys and ApplicationIDs to the connected card reader. </p>
+<h2 id='process-credit-sale-transaction'>Process Credit Sale Transaction</h2>
+<blockquote>
+<p>Process a Credit Transaction: </p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCreditSaleTransactionWithCardReader</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
+
+<span class="n">CreditSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CreditSaleTransactionRequest</span><span class="o">(</span> <span class="n">amount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
+
 </code></pre>
 <blockquote>
-<p>Request</p>
+<p>Similarly, to process a debit card transaction:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span></code></pre>
-<blockquote>
-<p>The above command returns this response:</p>
-</blockquote>
-<pre class="highlight javascript tab-javascript"><code><span class="nx">HTTP</span> <span class="nx">Status</span> <span class="nx">Code</span> <span class="mi">200</span> <span class="nx">OK</span>
+<pre class="highlight java tab-java"><code>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processDebitSaleTransactionWithCardReader</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
 
-</code></pre><h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>NA</td>
-<td>NA</td>
-</tr>
-</tbody></table>
-
-<aside class="success">HTTP Status code: 200 OK denotes success</aside>
-<h1 id='authorization'>Authorization</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='processing-transactions'>Processing Transactions</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h1 id='transactions'>Transactions</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='record-a-cash-transaction'>Record a Cash Transaction</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h2 id='get-a-transaction'>Get a Transaction</h2>
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h2 id='transaction-history'>Transaction History</h2><h2 id='send-email-receipt'>Send Email Receipt</h2><h1 id='users'>Users</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='retrieve-user-information'>Retrieve User Information</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h2 id='get-username-availability'>Get Username Availability</h2>
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h2 id='update-user-details'>Update User Details</h2><h2 id='forgot-password'>Forgot Password</h2><h1 id='packages'>Packages</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='get-eligible-pricing-packages'>Get Eligible Pricing Packages</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h1 id='profiles'>Profiles</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='retrieve-eligible-profiles'>Retrieve Eligible Profiles</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h1 id='organization'>Organization</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='boarding-a-merchant'>Boarding a Merchant</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h2 id='uodate-organization-billing-information'>Uodate Organization Billing Information</h2>
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h1 id='merchants'>Merchants</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='retrieve-merchant-information'>Retrieve Merchant Information</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h1 id='reference-information'>Reference Information</h1>
-<p>In addition to album and track information, you can also request information about the artists.</p>
-<h2 id='http-status-codes'>HTTP Status Codes</h2>
-<p>Retrieve information about all artists using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists</code></p>
-<h2 id='error-response-json-format'>Error Response JSON Format</h2>
-<p>Retrieve a specific artist using the following URL:</p>
-
-<p><code>GET http://example.com/api/artists/[ID]</code></p>
-
-<p><aside class="notice">
-Replace [ID] with the numeric ID of the artist
-</aside> later.</p>
-<h2 id='error-types'>Error Types</h2><h2 id='error-response-json-format-2'>Error Response JSON Format</h2><h2 id='error-codes'>Error Codes</h2><h2 id='transaction-codes'>Transaction Codes</h2><h2 id='pos-entry-modes'>POS Entry Modes</h2><h2 id='pos-capabilities'>POS Capabilities</h2><h2 id='pos-types'>POS Types</h2><h2 id='reversal-reasons'>Reversal Reasons</h2><h2 id='fallback-reasons'>Fallback Reasons</h2><h2 id='pos-entry-sources'>POS Entry Sources</h2><h2 id='card-presentment-codes'>Card Presentment Codes</h2><h2 id='tokenization-object-properties'>Tokenization Object Properties</h2><h1 id='errors'>Errors</h1>
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files...just save them to the `includes` folder and add them to the top of your `index.md`'s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
-
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The call requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified request could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The API requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+</code></pre>
+<p>Once the card reader is initialized and setup, it can then be used to process a credit card transaction. The method and callback implementation is shown to the right. </p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="json">json</a>
+                <a href="#" data-language-name="java">Android</a>
+                <a href="#" data-language-name="swift">iOS</a>
+                <a href="#" data-language-name="csharp">Windows</a>
           </div>
       </div>
     </div>

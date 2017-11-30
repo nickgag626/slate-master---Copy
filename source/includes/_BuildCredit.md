@@ -1,6 +1,6 @@
 # Building a Debit/Credit Transaction
   
-The process in which you make the method calls to make a debit or credit transaction is nearly identical with only the method name differentiating the two processes.
+The API calls for a debit or credit transaction are nearly identical, with only the method name differentiating the two processes.
 
 You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.
 
@@ -26,9 +26,9 @@ Ingenico.getInstance().device().initialize(context);
 
    ```
 
-This method calls initializes the card reader to work with the device. In order to get the initialize command to successfully run, you will need to ensure that your application has audio permissions.
+This method calls initializes the card reader to work with the device. In order to get the *initialize* command to successfully run, you will need to ensure that your application has audio permissions.
 
-Once the initialize command is run, it will iterate through your selected device types that have been set in section 7. This process can take several seconds and up to a minute. In order to reduce the time the initialize process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.
+Once the *initialize* command is run, it will iterate through your selected device types that have been set in the previous section. This process can take several seconds (and up to a minute). In order to reduce the time the initialization process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.
 
 
 ### Setup the Card Reader
@@ -55,7 +55,7 @@ class DeviceSetupCallbackImpl implements DeviceSetupCallback{
 
    ```
 
-Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The setup method sets the PublicKeys and ApplicationIDs to the connected card reader. 
+Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The *setup* method sets the PublicKeys and ApplicationIDs to the connected card reader. 
 
   
 ## Process Credit Sale Transaction

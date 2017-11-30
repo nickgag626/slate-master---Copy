@@ -43,7 +43,7 @@ To integrate the .aar file into your project, please follow the steps below:
   * Change the targetSDKversion parameter within the defaultConfig section to 21.
 
   <aside class="warning">
-The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
+The suggested targetSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
 </aside>
 
 ## API key

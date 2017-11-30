@@ -411,8 +411,8 @@ User provides the APIs to perform different administrative actions (authenticati
 <h2 id='unsupported-devices'>Unsupported Devices</h2>
 <p>At Ingenico Mobile Solutions, we attempt to support as wide of a variety of mobile devices as possible. If a device is not found on our list of compatible devices, the mPOS SDK will attempt to establish communication between the card reader and mobile device through default settings dependent on the mobile device manufacturer and model. If communication still cannot be established, then the methods below can be attempted that may be able to establish the connection between card reader and mobile device.</p>
 
-<p>Contact Technical Support
-If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:</p>
+<p><strong>Contact Technical Support</strong>
+<br/>If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:</p>
 
 <ul>
 <li>At least one available support block on your Ingenico Mobile Solutions account
@@ -484,7 +484,7 @@ If you do not see the download available, please contact the Developer Portal su
 </ul>
 
 <p><aside class="warning">
-The suggested targerSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
+The suggested targetSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
 </aside></p>
 <h2 id='api-key'>API key</h2>
 <blockquote>
@@ -707,7 +707,7 @@ Once the SDK cycles through this list, it checks to ensure that there is a match
 For a full list of card readers for the DeviceType class, refer to the Supported Readers section. 
 </aside>
 <h1 id='building-a-debit-credit-transaction'>Building a Debit/Credit Transaction</h1>
-<p>The process in which you make the method calls to make a debit or credit transaction is nearly identical with only the method name differentiating the two processes.</p>
+<p>The API calls for a debit or credit transaction are nearly identical, with only the method name differentiating the two processes.</p>
 
 <p>You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.</p>
 <h3 id='required-objects-for-transactions'>Required Objects for Transactions</h3>
@@ -762,9 +762,9 @@ For a full list of card readers for the DeviceType class, refer to the Supported
 <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 
 </code></pre>
-<p>This method calls initializes the card reader to work with the device. In order to get the initialize command to successfully run, you will need to ensure that your application has audio permissions.</p>
+<p>This method calls initializes the card reader to work with the device. In order to get the <em>initialize</em> command to successfully run, you will need to ensure that your application has audio permissions.</p>
 
-<p>Once the initialize command is run, it will iterate through your selected device types that have been set in section 7. This process can take several seconds and up to a minute. In order to reduce the time the initialize process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.</p>
+<p>Once the <em>initialize</em> command is run, it will iterate through your selected device types that have been set in the previous section. This process can take several seconds (and up to a minute). In order to reduce the time the initialization process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.</p>
 <h3 id='setup-the-card-reader'>Setup the Card Reader</h3>
 <blockquote>
 <p>Setup the PublicKeys and ApplicationIDs to the connected reader:</p>
@@ -787,7 +787,7 @@ For a full list of card readers for the DeviceType class, refer to the Supported
 <span class="o">}</span>
 
 </code></pre>
-<p>Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The setup method sets the PublicKeys and ApplicationIDs to the connected card reader. </p>
+<p>Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The <em>setup</em> method sets the PublicKeys and ApplicationIDs to the connected card reader. </p>
 <h2 id='process-credit-sale-transaction'>Process Credit Sale Transaction</h2>
 <blockquote>
 <p>Process a Credit Transaction: </p>

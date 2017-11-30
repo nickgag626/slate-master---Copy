@@ -20,8 +20,8 @@ For a list of supported devices, please reference the [Ingenico Device Compatabi
 ## Unsupported Devices
 At Ingenico Mobile Solutions, we attempt to support as wide of a variety of mobile devices as possible. If a device is not found on our list of compatible devices, the mPOS SDK will attempt to establish communication between the card reader and mobile device through default settings dependent on the mobile device manufacturer and model. If communication still cannot be established, then the methods below can be attempted that may be able to establish the connection between card reader and mobile device.
 
-Contact Technical Support
-If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:
+**Contact Technical Support**
+<br/>If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:
 
 * At least one available support block on your Ingenico Mobile Solutions account
   * You will need one support block for every mobile device that is incompatible.

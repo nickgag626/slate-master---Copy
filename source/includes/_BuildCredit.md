@@ -26,7 +26,7 @@ Ingenico.getInstance().device().initialize(context);
 
    ```
 
-This method calls initializes the card reader to work with the device. In order to get the *initialize* command to successfully run, you will need to ensure that your application has audio permissions.
+This method call initializes the card reader to work with the device. In order to get the *initialize* command to successfully run, you will need to ensure that your application has audio permissions.
 
 Once the *initialize* command is run, it will iterate through your selected device types that have been set in the previous section. This process can take several seconds (and up to a minute). In order to reduce the time the initialization process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.
 

@@ -69,6 +69,6 @@ The Ingenico mPOS EMV SDK includes four components:
 <br/>Payment Device provides the APIs required to setup card readers to be used for accepting payments, as well as retrieve all connection status updates.
 
 **User**
-User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.
+<br/>User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.
 
 

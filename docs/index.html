@@ -395,7 +395,7 @@ Customers will be able to accept EMV payments from any of the RP-reader series, 
 <br/>Payment Device provides the APIs required to setup card readers to be used for accepting payments, as well as retrieve all connection status updates.</p>
 
 <p><strong>User</strong>
-User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.</p>
+<br/>User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.</p>
 <h1 id='getting-started'>Getting Started</h1>
 <p>The new mPOS EMV SDK will be available to clients who register through the <a href="http://developer.ingenico.us">Ingenico Developer Portal</a>. Once you have obtained credentials for the portal, navigate to the Software tab on the banner and download the SDK package. </p>
 <h2 id='developer-portal'>Developer Portal</h2>
@@ -762,7 +762,7 @@ For a full list of card readers for the DeviceType class, refer to the Supported
 <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 
 </code></pre>
-<p>This method calls initializes the card reader to work with the device. In order to get the <em>initialize</em> command to successfully run, you will need to ensure that your application has audio permissions.</p>
+<p>This method call initializes the card reader to work with the device. In order to get the <em>initialize</em> command to successfully run, you will need to ensure that your application has audio permissions.</p>
 
 <p>Once the <em>initialize</em> command is run, it will iterate through your selected device types that have been set in the previous section. This process can take several seconds (and up to a minute). In order to reduce the time the initialization process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.</p>
 <h3 id='setup-the-card-reader'>Setup the Card Reader</h3>

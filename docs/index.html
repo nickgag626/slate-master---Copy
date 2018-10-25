@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;java&quot;,&quot;swift&quot;,&quot;csharp&quot;]">
+  <body class="index" data-languages="[&quot;java&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,8 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="java">Android</a>
-              <a href="#" data-language-name="swift">iOS</a>
-              <a href="#" data-language-name="csharp">Windows</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -244,12 +242,6 @@
                     <a href="#developer-portal" class="toc-h2 toc-link" data-title="Getting Started">Developer Portal</a>
                   </li>
                   <li>
-                    <a href="#supported-devices" class="toc-h2 toc-link" data-title="Getting Started">Supported Devices</a>
-                  </li>
-                  <li>
-                    <a href="#unsupported-devices" class="toc-h2 toc-link" data-title="Getting Started">Unsupported Devices</a>
-                  </li>
-                  <li>
                     <a href="#javadoc-resource" class="toc-h2 toc-link" data-title="Getting Started">JavaDoc Resource</a>
                   </li>
               </ul>
@@ -259,15 +251,6 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#integrate-the-aar-file" class="toc-h2 toc-link" data-title="Setup">Integrate the .aar File</a>
-                  </li>
-                  <li>
-                    <a href="#api-key" class="toc-h2 toc-link" data-title="Setup">API key</a>
-                  </li>
-                  <li>
-                    <a href="#point-to-ingenico-payment-server" class="toc-h2 toc-link" data-title="Setup">Point to Ingenico Payment Server</a>
-                  </li>
-                  <li>
-                    <a href="#set-the-client-version" class="toc-h2 toc-link" data-title="Setup">Set the Client Version</a>
                   </li>
               </ul>
           </li>
@@ -282,47 +265,6 @@
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#process-manual-card-entry" class="toc-h1 toc-link" data-title="Process Manual Card Entry">Process Manual Card Entry</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#required-objects-for-manually-entered-transaction" class="toc-h2 toc-link" data-title="Process Manual Card Entry">Required Objects for Manually Entered Transaction</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#process-cash-transaction" class="toc-h1 toc-link" data-title="Process Cash Transaction">Process Cash Transaction</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#required-objects-for-cash-transaction" class="toc-h2 toc-link" data-title="Process Cash Transaction">Required Objects for Cash Transaction</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#setting-the-environment" class="toc-h1 toc-link" data-title="Setting the Environment">Setting the Environment</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#required-objects-for-environment" class="toc-h2 toc-link" data-title="Setting the Environment">Required Objects for Environment</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#building-a-debit-credit-transaction" class="toc-h1 toc-link" data-title="Building a Debit/Credit Transaction">Building a Debit/Credit Transaction</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#required-objects-for-transactions" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Required Objects for Transactions</a>
-                  </li>
-                  <li>
-                    <a href="#initialize-the-card-reader" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Initialize the Card Reader</a>
-                  </li>
-                  <li>
-                    <a href="#setup-the-card-reader" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Setup the Card Reader</a>
-                  </li>
-                  <li>
-                    <a href="#process-credit-sale-transaction" class="toc-h2 toc-link" data-title="Building a Debit/Credit Transaction">Process Credit Sale Transaction</a>
-                  </li>
-              </ul>
-          </li>
       </div>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
@@ -333,21 +275,25 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1><h2 id='what-is-the-mpos-emv-sdk'>What is the mPOS EMV SDK?</h2>
-<p>The mPOS EMV SDK provides integration with a range of Ingenico mPOS card readers, as well as full integration with our EMV Gateway. By managing the end-to-end transaction (from card insertion to certified gateway processing), the SDK employs a semi-integrated approach keeping the mobile application compliant with all EMV certifications while eliminating PCI scope. Additionally, the SDK manages the lower-level back and forth communication required for an EMV transaction, simplifying the integration for developers. The mPOS EMV SDK isolates the transaction processing, reader management, reporting services and user management services from the UI. This way, if an application needs to support new devices or backend processors, clients don’t have to rebuild their application from the ground-up. Updates to the SDK will provide the client with components to support any future changes in functionality, such as adding additional mPOS card readers or supporting new transaction types.</p>
+<p>The mPOS EMV SDK provides clients the ability to integrate with a wide range of Ingenico mobile card readers (as well as full integration with our EMV gateway) to begin seamlessly building an application and accepting mobile payments. </p>
 
-<p>Our EMV gateway is always improving, and we are continually adding supported processors to our gateway to enhance our functionality and marketability.</p>
+<p>By managing the end-to-end transaction (from card insertion to certified gateway processing), the SDK manages an application&#39;s compliance with all EMV certifications while eliminating PCI scope. Additionally, the SDK manages all communication required for an EMV transaction, simplifying the integration for developers. </p>
 
-<p>The integration of the mPOS EMV SDK with an existing application allows an end-user to easily accept and process credit card payments, including EMV Contact, EMV Contactless and Magnetic Card Swipe transactions.</p>
+<p>The mPOS EMV SDK isolates the transaction processing, reader management, reporting services and user management services from the user interface. This way, if an application needs to support new devices or backend processors, clients don’t have to rebuild their application from the ground-up. Instead, the Ingenico team will support remote software updates providing clients a future-proof solution to any changes in functionality, card readers or transaction types. </p>
+
+<p>The mPOS EMV SDK also supports integration with an existing application (for instance, if a client wishes to add payment processing as a new feature). The client can then easily begin accepting and processing credit card payments, including EMV contact, EMC contactless, and magnetic card-swipe transactions. </p>
+
+<p>The Ingenico EMV gateway is always improving, and is continually adding supported processors to the gateway to enhance functionality and marketability.</p>
 <h2 id='what-is-included-in-the-sdk'>What is included in the SDK?</h2>
 <ul>
 <li><strong>A developer friendly toolkit</strong>, including Android/iOS libraries, SDK documentation, sample code, and test applications;</li>
 <li><strong>A wide range of EMV-ready card readers</strong>, with support for EMV chip &amp; sign, EMV chip &amp; PIN, NFC, and magstripe in a variety of form factors;</li>
-<li><strong>An EMV gateway</strong>, with connections to all major processors in the U.S., thus offering ISVs and their customers the flexibility to use the processor of their choice; and</li>
+<li><strong>An EMV gateway</strong>, with connections to all major processors in the U.S., thus offering ISVs and their customers the flexibility to use the processor of their choice, and</li>
 <li><strong>A future-proof solution</strong>, offering the ability to easily upgrade to new Ingenico Mobile Solutions readers as they emerge or support additional processors without having to re-certify.</li>
 </ul>
 <h2 id='supported-readers'>Supported Readers</h2>
 <p>Once fully integrated with the SDK, customers will be able to seamlessly process payments using one of Ingenico’s many mobile card readers, which connect directly to a merchant’s mobile device. Ingenico offers a variety of card readers, giving customers the ability to choose one that best suits their needs without additional integration work. 
-Customers will be able to accept EMV payments from any of the RP-reader series, which includes:</p>
+Customers will be able to accept EMV payments from any of the RP or MOBY series card readers, which include:</p>
 
 <table><thead>
 <tr>
@@ -389,430 +335,161 @@ Customers will be able to accept EMV payments from any of the RP-reader series, 
 <br/>The Ingenico class serves as the entry-point to the mPOS SDK. The APIs included will aid in initializing the project, as well as return the necessary information needed to begin processing transactions and managing devices. </p>
 
 <p><strong>Payment</strong> 
-<br/>Payment provides APIs to accept credit / debit payments through Ingenico Mobile card readers, manually entered credit card payments as well as cash payments. These APIs include the business logic to drive a credit / debit transaction through Ingenico Mobile card readers and Ingenico gateway, hiding the different steps involved in processing a card payment..</p>
+<br/>The Payment class provides APIs to accept credit / debit payments through Ingenico Mobile card readers, manually entered credit card payments as well as cash payments. These APIs include the business logic to drive a credit / debit transaction through Ingenico Mobile card readers and Ingenico gateway, hiding the different steps involved in processing a card payment..</p>
 
 <p><strong>Payment Device Abstraction Layer</strong>
-<br/>Payment Device provides the APIs required to setup card readers to be used for accepting payments, as well as retrieve all connection status updates.</p>
+<br/>The Payment Device class provides the APIs required to set up card readers for accepting payments, as well as retrieving all connection status updates.</p>
 
 <p><strong>User</strong>
-<br/>User provides the APIs to perform different administrative actions (authentication, retrieve Transactions history, details etc.,) against MCM backend services.</p>
+<br/>The User class provides the APIs to perform different administrative actions (authentication, retrieve transactions history, details etc.,) against Ingenico backend services.</p>
 <h1 id='getting-started'>Getting Started</h1>
-<p>The new mPOS EMV SDK will be available to clients who register through the <a href="http://developer.ingenico.us">Ingenico Developer Portal</a>. Once you have obtained credentials for the portal, navigate to the Software tab on the banner and download the SDK package. </p>
+<p>The mPOS EMV SDK is available to clients who register through the <a href="http://developer.ingenico.us">Ingenico Developer Portal</a>. Once necessary credentials have been obtained for the portal, navigate to the Software tab on the banner and download the SDK package. </p>
+
+<aside class="warning">
+If you do not see the download available, please contact the Developer Portal support team for help in gaining access to the files.
+</aside>
 <h2 id='developer-portal'>Developer Portal</h2>
 <p>The Ingenico Developer Portal serves as a distribution channel for our mPOS SDK material, as well as a collaborative environment for third-party developers to get the support they need for their projects and applications. </p>
 
-<p><br/>A request for an account can be made at (http://developer.ingenico.us), and will be reviewed by the internal Ingenico team before an account is activated. (Note: This allows creation of a user account only, therefore each user (Developer) for an ISV will need to register and create their own account.)</p>
+<p><br/>A request for an account can be made at http://developer.ingenico.us and will be reviewed by the internal Ingenico team before the account is activated. (Note: This allows creation of a user account only, therefore each user (developer) for an ISV will need to register and create their own account.)</p>
 
 <p><br/>Once approved, an NDA will be executed and a new client/customer record will be created in the portal for future portal notifications, updates, and any other changes.</p>
 
-<p><br/>Existing clients who utilize the ROAMpay API or who are clients for RUA or another API product through Netsuite, will be asked to register on the developer portal in order to access the new mPOS EMV SDK.</p>
-<h2 id='supported-devices'>Supported Devices</h2>
-<p>For a list of supported devices, please reference the <a href="http://mobile-solutions.ingenico.com/device-compatibility/">Ingenico Device Compatability page</a> </p>
-<h2 id='unsupported-devices'>Unsupported Devices</h2>
-<p>At Ingenico Mobile Solutions, we attempt to support as wide of a variety of mobile devices as possible. If a device is not found on our list of compatible devices, the mPOS SDK will attempt to establish communication between the card reader and mobile device through default settings dependent on the mobile device manufacturer and model. If communication still cannot be established, then the methods below can be attempted that may be able to establish the connection between card reader and mobile device.</p>
-
-<p><strong>Contact Technical Support</strong>
-<br/>If the card reader cannot connect to the mobile device successfully, you can contact our technical support team and have our engineers investigate the incompatibility issue. We will manually add the mobile device parameters necessary into our mPOS SDK as well as make any firmware revisions, changes, and fixes to our card reader in order to provide compatibility. If you are interested in contacting our technical support team, please ensure you have the following:</p>
-
-<ul>
-<li>At least one available support block on your Ingenico Mobile Solutions account
-
-<ul>
-<li>You will need one support block for every mobile device that is incompatible.</li>
-<li>Your support block will be refunded if we are unable to provide compatibility and support for the requested mobile device.</li>
-</ul></li>
-<li>Mobile device manufacturer</li>
-<li>Exact model of the device</li>
-<li>Android version being tested on</li>
-<li>Parameters retrieved from the calibration tool (if any)</li>
-<li>If the issue is present on audio jack, Bluetooth, or both</li>
-</ul>
-
-<p>Once we receive all the information, our support staff will queue the issue to our engineers. You will be provided a case number and updated regularly on the issue and it’s progress. The time it takes to add support for mobile devices vary from device to device. Some mobile devices can be added on the same day and some may take several days to complete. During this time, if you have any questions, feel free to ask any of the support staff. If you the inquiry is urgent, please also include the SDK Product Manager as a CC. </p>
+<p><br/>Existing clients who utilize the ROAMpay API (or are clients for RUA or another API product through Netsuite) will be asked to register on the developer portal in order to access the new mPOS EMV SDK.</p>
 <h2 id='javadoc-resource'>JavaDoc Resource</h2>
-<p>The SDK comes with an included Javadoc resource which contains information regarding all API classes, methods, exceptions, and other definitions. The Javadoc can be found in the <strong>\libs</strong> folder of the SDK package that was downloaded. The filename for the Javadoc resource is as follows: <strong>ingenico-mpos-sdk- v1.X.X-javadoc.jar</strong>. In order to properly open the Javadoc, please extract all contents within the jar file into a separate folder and locate the <strong>index.html</strong> file.</p>
+<p>The SDK comes with an included Javadoc resource which contains information regarding all API classes, methods, exceptions, and other definitions. The Javadoc can be found in the <strong>\libs</strong> folder of the SDK package that was downloaded. </p>
+
+<p>The filename for the Javadoc resource is as follows: <strong>ingenico-mpos-sdk- v1.X.X-javadoc.jar</strong>. </p>
+
+<p>In order to properly open the Javadoc, please extract all contents within the jar file into a separate folder and locate the <strong>index.html</strong> file.</p>
 <h1 id='setup'>Setup</h1>
-<p>In order to have access to the SDK, you will need to integrate the .AAR file into your project. The
-.AAR file can be found within the Pilot package located on the developer portal’s Software page. 
-<aside class="warning">
-If you do not see the download available, please contact the Developer Portal support team for help in getting access to the files.
-</aside></p>
+<p>In order to begin using the SDK, you will need to integrate the .aar file into your project. The .aar file can be found within the SDK package located on the developer portal’s software page. </p>
+
+<aside class="notice">
+The .aar file will include everything you need to begin building your application, including all Ingenico source code and resource files. 
+</aside>
 <h2 id='integrate-the-aar-file'>Integrate the .aar File</h2>
 <p>To integrate the .aar file into your project, please follow the steps below:</p>
 
 <ul>
-<li>Copy the .aar file to your project
+<li><strong>Copy the .aar file to your project</strong> <br/>
 
-<ul>
-<li>Download the mPOS EMV Android SDK from the developer portal</li>
-<li>Unzip the downloaded contents to a new file destination</li>
-<li>Open the unzipped folder contents in Windows Explorer</li>
-<li>Navigate to the /libs folder</li>
-<li>Copy the .aar file within the directory</li>
-<li>Navigate to your project’s /libs directory (typically located at: <project directory>/apps/libs)</li>
-<li>Paste the .aar file to your project’s /libs folder</li>
-</ul></li>
+<ol>
+<li>Download the mPOS EMV Android SDK from the <a href="https://developer.ingenico.us/">developer portal</a>.</li>
+<li>Unzip the downloaded contents to a new file destination.</li>
+<li>Open the unzipped folder contents.</li>
+<li>Navigate to the <code>/libs</code> folder.</li>
+<li>Copy the .aar file within the directory.</li>
+<li>Navigate to your project’s <code>/libs</code> directory (typically located at: <code>project directory/apps/libs)</code>.</li>
+<li>Paste the .aar file to your project’s <code>/libs</code> folder.</li>
+</ol></li>
 </ul>
 
 <blockquote>
 <p>Insert this code into the dependencies section:</p>
 </blockquote>
 <pre class="highlight java tab-java"><code>
-  <span class="n">compile</span> <span class="err">'</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="nl">design:</span><span class="o">&lt;</span><span class="n">design</span> <span class="n">version</span><span class="o">&gt;</span><span class="err">'</span>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">include:</span> <span class="o">[</span><span class="err">'</span><span class="o">*.</span><span class="na">jar</span><span class="err">'</span><span class="o">],</span> <span class="nl">dir:</span> <span class="err">'</span><span class="n">libs</span><span class="err">'</span><span class="o">)</span>
+    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span><span class="err">'</span><span class="n">file</span> <span class="n">name</span><span class="err">'</span><span class="o">,</span> <span class="nl">ext:</span><span class="err">'</span><span class="n">aar</span><span class="err">'</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="n">repositories</span><span class="o">{</span>
+    <span class="n">flatDir</span><span class="o">{</span>
+        <span class="n">dirs</span> <span class="err">'</span><span class="n">libs</span><span class="err">'</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="err">'</span>
 
 </code></pre>
 <ul>
-<li><p><strong>Update the build.gradle file</strong></p>
+<li><strong>Update the build.gradle file</strong>
+
+<ol>
+<li>Open your Android project.</li>
+<li>Navigate and open the <code>build.gradle</code> (Module.app) file.</li>
+<li>Insert the code in the right-hand column into the dependencies section where: 
 
 <ul>
-<li>Open your Android project</li>
-<li>Navigate and open the build.gradle (Module.app) file</li>
-<li>Insert the code in the right-hand column into the dependencies section where:</li>
-<li><strong><design version></strong> is the design support library you want to use. The latest version can be found <a href="http://developer.android.com/tools/support-%20library/features.html">here</a></li>
-<li><strong><file name></strong> is the name of the copied .aar file from Step 1. </li>
-<li>Copy the .aar file within the directory</li>
-<li>Navigate to your project’s /libs directory (typically located at: <project directory>/apps/libs)</li>
-<li>Paste the .aar file to your project’s /libs folder</li>
+<li><code>file name</code> is the name of the copied .aar file from Step 1 (e.g. ingenico-mpos-sdk-v1.0.0-release). </li>
 </ul></li>
-<li><p><strong>Update the targetSDKVersion</strong> (optional)</p>
-
-<ul>
-<li>Open your Android project</li>
-<li>Navigate and open the build.gradle (Module.app) file</li>
-<li>Change the targetSDKversion parameter within the defaultConfig section to 21.</li>
-</ul></li>
+</ol></li>
 </ul>
-
-<p><aside class="warning">
-The suggested targetSDKversion is 21 or lower. If it is set to 22 or higher, the app developer is responsible for handling runtime permissions.
-</aside></p>
-<h2 id='api-key'>API key</h2>
+<h1 id='initialize-and-login'>Initialize and Login</h1><h2 id='initialize'>Initialize</h2>
 <blockquote>
-<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
+<p>The Ingenico class acts as an entry point to the Ingenico mPOS SDK.</p>
 </blockquote>
 <pre class="highlight java tab-java"><code>
-<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">API_KEY</span> <span class="o">=</span> <span class="s">"RC46-d78d2d37-f7b7-40c9-bf3g-9ecd05cdc562"</span><span class="o">;</span>
-<span class="c1">//The string above is only an example and will not work in a live environment</span>
-
-
-</code></pre>
-<p>You will need to have an API key that will be used as an authentication measure in order to use the SDK. If you have not received your API key, please contact mPOS SDK support team to have one assigned. It is recommended that you create a constant string variable that holds your API key. In your <strong>MainActivity.java</strong> file, add the constant variable as shown to the right. </p>
-<h2 id='point-to-ingenico-payment-server'>Point to Ingenico Payment Server</h2>
-<blockquote>
-<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">DEFAULT_BASE_URL</span> <span class="o">=</span> <span class="s">"https://uatmcm.roamdata.com/"</span><span class="o">;</span>
-
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">baseURL</span><span class="o">,</span>
+                        <span class="n">apiKey</span><span class="o">,</span>
+                        <span class="n">clientVersion</span><span class="o">);</span> 
 
 </code></pre>
-<p>Another constant string variable should be created, which contains the URL to the Ingenico Payment Server. This will also be needed in order to make function calls. In your MainActivity.java file, add the constant variable as shown to the right:</p>
-<h2 id='set-the-client-version'>Set the Client Version</h2>
-<blockquote>
-<p>Add the constant variable as shown below to your MainActivity.jar file:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="kd">private</span> <span class="kd">final</span> <span class="kd">static</span> <span class="n">String</span> <span class="n">CLIENT_VERSION</span> <span class="o">=</span> <span class="s">"0.1"</span><span class="o">;</span>
+<p>In order to use the SDK, you will need to first initialize it. The method shown here will initialize the singleton instance of Ingenico, and set the API key, Base URL and Client Version. </p>
 
-
-</code></pre>
-<p>In addition to the payment server and API key, you will also need to set the Client Version through a constant variable. In your MainActivity.java file, add the constant variable as shown below:</p>
-<h1 id='initialize-and-login'>Initialize and Login</h1><h2 id='initialize'>Initialize</h2><pre class="highlight java tab-java"><code>
-<span class="c1">//Example initiating the Ingenico object</span>
-<span class="n">Ingenico</span> <span class="n">ingenico</span> <span class="o">=</span> <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span><span class="n">URL</span><span class="o">,</span> <span class="n">API_KEY</span><span class="o">,</span> <span class="n">CLIENT_VERSION</span><span class="o">);</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">setLogging</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-
-<span class="c1">//Example calling the method directly </span>
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">getApplicationContext</span><span class="o">(),</span><span class="n">URL</span><span class="o">,</span> <span class="n">API_KEY</span><span class="o">,</span> <span class="n">CLIENT_VERSION</span><span class="o">);</span> <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">setLogging</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
-
-
-</code></pre>
-<p>In order to use the SDK, you will need to first initialize it. The syntax to initialize the SDK is shown to the right. The initialize method is available within the Ingenico instance object. The Ingenico object is a singleton class, so it can either be instantiated or called directly as shown.</p>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>baseURL</td>
+<td>String</td>
+<td>Hostname of the Ingenico Payment Server</td>
+</tr>
+<tr>
+<td>apiKey</td>
+<td>String</td>
+<td>API Key of the client application for the Ingenico Payment Server</td>
+</tr>
+<tr>
+<td>clientVersion</td>
+<td>String</td>
+<td>Version of the client application</td>
+</tr>
+</tbody></table>
 <h2 id='login'>Login</h2><pre class="highlight java tab-java"><code>
-<span class="kd">private</span> <span class="kd">class</span> <span class="nc">LoginCallbackImpl</span> <span class="kd">implements</span> <span class="n">LoginCallback</span> <span class="o">{</span>
-   <span class="nd">@Override</span>
-   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">,</span> <span class="n">UserProfile</span> <span class="n">user</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
-      <span class="c1">//Login succeeded</span>
-      <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-      <span class="c1">//Login failed and the responseCode will indicate the error</span>
-      <span class="o">}</span>
+<span class="kd">class</span> <span class="nc">LoginCallbackImpl</span> <span class="kd">implements</span> <span class="n">LoginCallback</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">,</span> <span class="n">UserProfile</span> <span class="n">userProfile</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
+            <span class="cm">/*Login succeeded*/</span>
+       <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="cm">/*Login failed and the responseCode will indicate the error */</span>
+       <span class="o">}</span>
    <span class="o">}</span>
 <span class="o">}</span>
 
-
-
-</code></pre>
-<p>Once the SDK has been initialized, you will need to login and validate a user’s authenticity to use the application. It is recommended that the login functionality should be created using internal security procedures and guidelines. You will need to create the following class based off the abstract class, <strong>LoginCallback</strong>. </p>
-
-<blockquote>
-<p>Once the class has been implemented, you can then call the login method, as shown below, through an <strong>onClick</strong> event:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
 <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">user</span><span class="o">().</span><span class="na">login</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">,</span> <span class="k">new</span> <span class="n">LoginCallbackImpl</span><span class="o">());</span>
 
-</code></pre><h1 id='process-manual-card-entry'>Process Manual Card Entry</h1>
-<p>This section describes how to process a credit card by manually keying in the card information to include:</p>
-
-<ol>
-<li>Credit Card Number</li>
-<li>Expiration Date</li>
-<li>CVV2/CVC Code</li>
-</ol>
-
-<p>The method in which you input the above information is completely up to you. The most common way is to have an on-screen number pad to type in the numbers. Processing credit cards manually is also an optional functionality for your application. If you do not plan on allowing your merchants to accept payment by manually entering a card number, then skip to section the next section &quot;Processing Cash Transactions&quot;.</p>
-<h3 id='required-objects-for-manually-entered-transaction'>Required Objects for Manually Entered Transaction</h3>
-<blockquote>
-<p>Code Example</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">CashSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CashSaleTransactionRequest</span><span class="o">(</span>
-<span class="n">card</span><span class="o">,</span> <span class="n">saleAmount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
-
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCashTransaction</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
-
 
 </code></pre>
+<p>Once you have successfully initialized the SDK, you can now log in. Provide your username and password as input parameters (listed below) to successfully log in. </p>
+
 <table><thead>
 <tr>
-<th>Object Name</th>
-<th>Object Type</th>
+<th>Parameter</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>card</td>
-<td>Card</td>
-<td>Credit card information</td>
-</tr>
-<tr>
-<td>saleAmount</td>
-<td>Amount</td>
-<td>Cost of the sale</td>
-</tr>
-<tr>
-<td>products</td>
-<td>List<Product></td>
-<td>List of the products</td>
-</tr>
-<tr>
-<td>gpsLongitude</td>
+<td>username</td>
 <td>String</td>
-<td>The location’s longitude</td>
+<td>Username used to log in to the system</td>
 </tr>
 <tr>
-<td>gpsLatitude</td>
+<td>password</td>
 <td>String</td>
-<td>The location’s latitude</td>
-</tr>
-<tr>
-<td>transactionGroupID</td>
-<td>String</td>
-<td>TBI -- set as null</td>
+<td>User&#39;s password</td>
 </tr>
 </tbody></table>
-<h1 id='process-cash-transaction'>Process Cash Transaction</h1>
-<p>In certain payment scenarios, you may need to split the transaction into multiple pieces. One piece will be paid in credit while another is paid in cash. Our SDK also allows you to process a cash transaction if you wish to keep all payment activity within one application and management system.
-The ability to process a cash transaction is completely optional. You do not have to implement the ability to process a cash transaction if your application on payment model does not involve cash as a form of payment. If this is the case, you can skip to the next section, &quot;Setting the Environment.&quot;</p>
-<h3 id='required-objects-for-cash-transaction'>Required Objects for Cash Transaction</h3>
-<blockquote>
-<p>Code Example</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">CashSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CashSaleTransactionRequest</span><span class="o">(</span> <span class="n">amount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
-
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCashTransaction</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
-
-
-
-</code></pre>
-<table><thead>
-<tr>
-<th>Object Name</th>
-<th>Object Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>amount</td>
-<td>Amount</td>
-<td>Cost of the sale</td>
-</tr>
-<tr>
-<td>products</td>
-<td>List<Product></td>
-<td>List of the products</td>
-</tr>
-<tr>
-<td>gpsLongitude</td>
-<td>String</td>
-<td>The location’s longitude</td>
-</tr>
-<tr>
-<td>gpsLatitude</td>
-<td>String</td>
-<td>The location’s latitude</td>
-</tr>
-<tr>
-<td>transactionGroupID</td>
-<td>String</td>
-<td>TBI -- set as null</td>
-</tr>
-</tbody></table>
-<h1 id='setting-the-environment'>Setting the Environment</h1>
-<blockquote>
-<p>To set a single allowable device type, you will need to make the following method call:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">DeviceType</span> <span class="n">deviceType</span> <span class="o">=</span> <span class="n">DeviceType</span><span class="o">.</span><span class="na">RP450c</span><span class="o">;</span> <span class="n">ingenico</span><span class="o">.</span><span class="na">device</span><span class="o">().</span><span class="na">setDeviceType</span><span class="o">(</span><span class="n">deviceType</span><span class="o">);</span>
-
-</code></pre>
-<blockquote>
-<p>If you need to set multiple allowable device types, you will need to make the following method call:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">List</span><span class="o">&lt;</span><span class="n">DeviceType</span><span class="o">&gt;</span> <span class="n">audioJackDeviceTypes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
-     <span class="o">{</span>
-        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">G4x</span><span class="o">);</span> 
-        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP450c</span><span class="o">);</span> 
-        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP350x</span><span class="o">);</span> 
-        <span class="n">audioJackDeviceTypes</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">DeviceType</span><span class="o">.</span><span class="na">RP170c</span><span class="o">);</span>
-     <span class="o">}</span>
-<span class="n">ingenico</span><span class="o">.</span><span class="na">device</span><span class="o">().</span><span class="na">setDeviceTypes</span><span class="o">(</span><span class="n">audioJackDeviceTypes</span><span class="o">);</span>
-
-
-</code></pre>
-<p>This section will cover the basics if you want to begin using a card reader to accept transactions. When an Ingenico card reader is plugged into your mobile device, the SDK cycles through a list to determine what kind of card reader was plugged in. The list that it searches through is appended by calling the setDeviceType() or setDeviceTypes() method calls, as shown in the code example.
-Once the SDK cycles through this list, it checks to ensure that there is a match. The SDK reads through the list in an organized manner, meaning the first item added is the first type of device checked. It is recommended to append items to this list depending on what card readers are most commonly used.</p>
-<h3 id='required-objects-for-environment'>Required Objects for Environment</h3>
-<table><thead>
-<tr>
-<th>Object Name</th>
-<th>Object Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>deviceType</td>
-<td>DeviceType</td>
-<td>Type of card reader being used</td>
-</tr>
-<tr>
-<td>audioJackDeviceTypes</td>
-<td>List<DeviceType></td>
-<td>List of card reader types</td>
-</tr>
-</tbody></table>
-
-<aside class="notice">
-For a full list of card readers for the DeviceType class, refer to the Supported Readers section. 
-</aside>
-<h1 id='building-a-debit-credit-transaction'>Building a Debit/Credit Transaction</h1>
-<p>The API calls for a debit or credit transaction are nearly identical, with only the method name differentiating the two processes.</p>
-
-<p>You first have to set the environment, as described in the previous section. Once the environment is setup, you will be able to attach the card readers to your mobile device allowing you to process debit/credit transactions.</p>
-<h3 id='required-objects-for-transactions'>Required Objects for Transactions</h3>
-<table><thead>
-<tr>
-<th>Object Name</th>
-<th>Object Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>card</td>
-<td>Card</td>
-<td>Credit card information</td>
-</tr>
-<tr>
-<td>saleAmount</td>
-<td>Amount</td>
-<td>Cost of the sale</td>
-</tr>
-<tr>
-<td>products</td>
-<td>List<Product></td>
-<td>List of the products</td>
-</tr>
-<tr>
-<td>gpsLongitude</td>
-<td>String</td>
-<td>The location’s longitude</td>
-</tr>
-<tr>
-<td>gpsLatitude</td>
-<td>String</td>
-<td>The location’s latitude</td>
-</tr>
-<tr>
-<td>transactionGroupID</td>
-<td>String</td>
-<td>TBI -- set as null</td>
-</tr>
-<tr>
-<td>Context</td>
-<td>Android Context</td>
-<td></td>
-</tr>
-</tbody></table>
-<h3 id='initialize-the-card-reader'>Initialize the Card Reader</h3>
-<blockquote>
-<p>As mentioned, after setting the environment, you will want to connect the card reader. Once the card reader is connected via audio jack, make the following call:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
-
-</code></pre>
-<p>This method call initializes the card reader to work with the device. In order to get the <em>initialize</em> command to successfully run, you will need to ensure that your application has audio permissions.</p>
-
-<p>Once the <em>initialize</em> command is run, it will iterate through your selected device types that have been set in the previous section. This process can take several seconds (and up to a minute). In order to reduce the time the initialization process takes, you can reduce the amount of allowable device types if they are not being used in your environment. In a testing environment, this can greatly reduce the QA process.</p>
-<h3 id='setup-the-card-reader'>Setup the Card Reader</h3>
-<blockquote>
-<p>Setup the PublicKeys and ApplicationIDs to the connected reader:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="k">if</span><span class="o">(</span><span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">isSetupRequired</span><span class="o">()){</span> 
-     <span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">device</span><span class="o">().</span><span class="na">setup</span><span class="o">(</span><span class="k">new</span> 
-     <span class="n">DeviceSetupCallbackImpl</span><span class="o">());</span>
-<span class="o">}</span>
-
-<span class="kd">class</span> <span class="nc">DeviceSetupCallbackImpl</span> <span class="kd">implements</span> <span class="n">DeviceSetupCallback</span><span class="o">{</span>
-     <span class="nd">@Override</span>
-     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
-         <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
-             <span class="c1">//Implement the success logic</span>
-         <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-              <span class="c1">//Implement the failure logic - code in the response will indicates the reason*/</span>
-         <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-
-</code></pre>
-<p>Once the card reader has been initialized, you will need to set it up so that it can communicate with the mobile device and receive commands. The <em>setup</em> method sets the PublicKeys and ApplicationIDs to the connected card reader. </p>
-<h2 id='process-credit-sale-transaction'>Process Credit Sale Transaction</h2>
-<blockquote>
-<p>Process a Credit Transaction: </p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processCreditSaleTransactionWithCardReader</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
-
-<span class="n">CreditSaleTransactionRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CreditSaleTransactionRequest</span><span class="o">(</span> <span class="n">amount</span><span class="o">,</span> <span class="n">products</span><span class="o">,</span> <span class="n">gpsLongitude</span><span class="o">,</span> <span class="n">gpsLatitude</span><span class="o">,</span> <span class="n">transactionGroupID</span><span class="o">);</span>
-
-</code></pre>
-<blockquote>
-<p>Similarly, to process a debit card transaction:</p>
-</blockquote>
-<pre class="highlight java tab-java"><code>
-<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">payment</span><span class="o">().</span><span class="na">processDebitSaleTransactionWithCardReader</span> <span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="k">new</span> <span class="n">TransactionCallbackImpl</span><span class="o">());</span>
-
-</code></pre>
-<p>Once the card reader is initialized and setup, it can then be used to process a credit card transaction. The method and callback implementation is shown to the right. </p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="java">Android</a>
-                <a href="#" data-language-name="swift">iOS</a>
-                <a href="#" data-language-name="csharp">Windows</a>
           </div>
       </div>
     </div>

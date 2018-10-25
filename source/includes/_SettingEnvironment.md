@@ -8,6 +8,12 @@ DeviceType deviceType = DeviceType.RP450c; ingenico.device().setDeviceType(devic
 
    ```
    
+   ```swift
+
+[[Ingenico sharedInstance].PaymentDevice setDeviceType:RUADeviceTypeRP750x];
+
+   ```
+   
 >If you need to set multiple allowable device types, you will need to make the following method call:
 
   ```java
@@ -20,6 +26,13 @@ List<DeviceType> audioJackDeviceTypes = new ArrayList<>();
 		audioJackDeviceTypes.add(DeviceType.RP170c);
      }
 ingenico.device().setDeviceTypes(audioJackDeviceTypes);
+
+
+   ```
+   
+   ```swift
+
+[[Ingenico sharedInstance].PaymentDevice setDeviceType:deviceTypes];
 
 
    ```

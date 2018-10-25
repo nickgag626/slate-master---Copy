@@ -21,6 +21,30 @@ Ingenico.getInstance().payment().processCashTransaction (request, new Transactio
  
   ```
   
+  ```swift
+
+IMSKeyedCardSaleTransactionRequest *request = [[IMSKeyedCardSaleTransactionRequest alloc] initWithCard:Card
+andAmount:amount 
+                                    andProducts:nil 
+                                    andLongitude:longitude
+                                    andLatitude:latitude
+                           andTransactionGroupID:transactionGroupID]];
+[[Ingenico sharedInstance].Payment processKeyedTransaction:request 
+andOnDone:^(IMSTransactionResponse *response, NSError *error)
+{
+    		if(!error){
+                                        /*Transaction succeeded(code in the response will indicates the result of the transaction)*/
+            }
+            else{
+                /*Transaction failed and the responseCode will indicate the error */
+                NSInteger responseCode = error.code;
+                 }
+             }];   
+
+
+ 
+  ```
+  
 Object Name | Object Type | Description
 --------- | ------- | ----------- | -----------
 card | Card |  Credit card information

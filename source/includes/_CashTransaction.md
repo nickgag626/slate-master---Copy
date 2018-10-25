@@ -16,6 +16,31 @@ Ingenico.getInstance().payment().processCashTransaction (request, new Transactio
  
   ```
   
+  ```swift
+
+[[IMSCashSaleTransactionRequest alloc] initWithAmount:amount
+                                    andProducts:nil 
+                                    andCustomerInfo:nil
+                                    andLongitude:longitude
+                                    andLatitude:latitude
+                           andTransactionGroupID:transactionGroupID]];
+[[Ingenico sharedInstance].Payment processCashTransaction:request 
+andOnDone:^(IMSTransactionResponse *response, NSError *error)
+{
+    		if(!error){
+                                        /*Transaction succeeded(code in the response will indicates the result of the transaction)*/
+            }
+            else{
+                /*Transaction failed and the responseCode will indicate the error */
+                NSInteger responseCode = error.code;
+                 }
+             }];   
+
+
+
+ 
+  ```
+  
 Object Name | Object Type | Description
 --------- | ------- | ----------- | -----------
 amount | Amount | Cost of the sale

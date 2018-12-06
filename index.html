@@ -1,0 +1,497 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ingenico mPOS SDK Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;java&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="java">Android</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#what-is-the-mpos-emv-sdk" class="toc-h2 toc-link" data-title="Introduction">What is the mPOS EMV SDK?</a>
+                  </li>
+                  <li>
+                    <a href="#what-is-included-in-the-sdk" class="toc-h2 toc-link" data-title="Introduction">What is included in the SDK?</a>
+                  </li>
+                  <li>
+                    <a href="#supported-readers" class="toc-h2 toc-link" data-title="Introduction">Supported Readers</a>
+                  </li>
+                  <li>
+                    <a href="#breakdown-of-the-ingenico-mpos-emv-sdk" class="toc-h2 toc-link" data-title="Introduction">Breakdown of the Ingenico mPOS EMV SDK</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#developer-portal" class="toc-h2 toc-link" data-title="Getting Started">Developer Portal</a>
+                  </li>
+                  <li>
+                    <a href="#javadoc-resource" class="toc-h2 toc-link" data-title="Getting Started">JavaDoc Resource</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#setup" class="toc-h1 toc-link" data-title="Setup">Setup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#integrate-the-aar-file" class="toc-h2 toc-link" data-title="Setup">Integrate the .aar File</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#initialize-and-login" class="toc-h1 toc-link" data-title="Initialize and Login">Initialize and Login</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#initialize" class="toc-h2 toc-link" data-title="Initialize and Login">Initialize</a>
+                  </li>
+                  <li>
+                    <a href="#login" class="toc-h2 toc-link" data-title="Initialize and Login">Login</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://www.ingenico.com/our-solutions/mobile-solutions'>Ingenico Mobile Solutions</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1><h2 id='what-is-the-mpos-emv-sdk'>What is the mPOS EMV SDK?</h2>
+<p>The mPOS EMV SDK provides clients the ability to integrate with a wide range of Ingenico mobile card readers (as well as full integration with our EMV gateway) to begin seamlessly building an application and accepting mobile payments. </p>
+
+<p>By managing the end-to-end transaction (from card insertion to certified gateway processing), the SDK manages an application&#39;s compliance with all EMV certifications while eliminating PCI scope. Additionally, the SDK manages all communication required for an EMV transaction, simplifying the integration for developers. </p>
+
+<p>The mPOS EMV SDK isolates the transaction processing, reader management, reporting services and user management services from the user interface. This way, if an application needs to support new devices or backend processors, clients don’t have to rebuild their application from the ground-up. Instead, the Ingenico team will support remote software updates providing clients a future-proof solution to any changes in functionality, card readers or transaction types. </p>
+
+<p>The mPOS EMV SDK also supports integration with an existing application (for instance, if a client wishes to add payment processing as a new feature). The client can then easily begin accepting and processing credit card payments, including EMV contact, EMC contactless, and magnetic card-swipe transactions. </p>
+
+<p>The Ingenico EMV gateway is always improving, and is continually adding supported processors to the gateway to enhance functionality and marketability.</p>
+<h2 id='what-is-included-in-the-sdk'>What is included in the SDK?</h2>
+<ul>
+<li><strong>A developer friendly toolkit</strong>, including Android/iOS libraries, SDK documentation, sample code, and test applications;</li>
+<li><strong>A wide range of EMV-ready card readers</strong>, with support for EMV chip &amp; sign, EMV chip &amp; PIN, NFC, and magstripe in a variety of form factors;</li>
+<li><strong>An EMV gateway</strong>, with connections to all major processors in the U.S., thus offering ISVs and their customers the flexibility to use the processor of their choice, and</li>
+<li><strong>A future-proof solution</strong>, offering the ability to easily upgrade to new Ingenico Mobile Solutions readers as they emerge or support additional processors without having to re-certify.</li>
+</ul>
+<h2 id='supported-readers'>Supported Readers</h2>
+<p>Once fully integrated with the SDK, customers are able to seamlessly process payments using one of Ingenico’s many mobile card readers, which connect directly to a merchant’s mobile device. Ingenico offers a variety of card readers, giving customers the ability to choose one that best suits their needs without additional integration work. 
+Customers are able to accept EMV payments from any of the RP or MOBY series card readers, which include:</p>
+
+<table><thead>
+<tr>
+<th>Reader</th>
+<th>Payment Type Accepted</th>
+<th>Supported Communication Interfaces</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>RP350</td>
+<td>EMV Chip &amp; Sign, MSR Mobile Card Reader</td>
+<td>Audio Jack</td>
+</tr>
+<tr>
+<td>RP450</td>
+<td>SR NFC, EMV NFC, EMV Chip &amp; Sign, MSR Mobile Card Reader</td>
+<td>Bluetooth, Audio Jack</td>
+</tr>
+<tr>
+<td>RP750</td>
+<td>MSR NFC, MSR EMV, EMV Chip &amp; Pin, PIN Debit</td>
+<td>Bluetiith, Audio Jack</td>
+</tr>
+<tr>
+<td>MOBY/3000</td>
+<td>MSR MSR EMV, EMV Chip &amp; Pin, PIN Debit, MSR Mobile Card Reader</td>
+<td>Bluetooth, (USB for Android only)</td>
+</tr>
+<tr>
+<td>MOBY/8500</td>
+<td>MSR NFC, MSR EMV, EMV Chip &amp; Pin, PIN Debit</td>
+<td>Bluetooth</td>
+</tr>
+</tbody></table>
+<h2 id='breakdown-of-the-ingenico-mpos-emv-sdk'>Breakdown of the Ingenico mPOS EMV SDK</h2>
+<p>The Ingenico mPOS EMV SDK includes four components:</p>
+
+<p><strong>Ingenico</strong> 
+<br/>The Ingenico class serves as the entry-point to the mPOS SDK. The APIs included aid in initializing the project, as well as return the necessary information needed to begin processing transactions and managing devices. </p>
+
+<p><strong>Payment</strong> 
+<br/>The Payment class provides APIs to accept credit / debit payments through Ingenico Mobile card readers, manually entered credit card payments as well as cash payments. These APIs include the business logic to drive a credit / debit transaction through Ingenico Mobile card readers and Ingenico gateway, hiding the different steps involved in processing a card payment.</p>
+
+<p><strong>Payment Device Abstraction Layer</strong>
+<br/>The Payment Device class provides the APIs required to set up card readers for accepting payments, as well as retrieving all connection status updates.</p>
+
+<p><strong>User</strong>
+<br/>The User class provides the APIs to perform different administrative actions (authentication, retrieve transactions history, details etc.,) against Ingenico backend services.</p>
+<h1 id='getting-started'>Getting Started</h1>
+<p>The mPOS EMV SDK is available to clients who register through the <a href="http://developer.ingenico.us">Ingenico Developer Portal</a>. Once necessary credentials have been obtained for the portal, navigate to the Software tab on the banner and download the SDK package. </p>
+
+<aside class="warning">
+If you do not see the download available, please contact the Developer Portal support team for help in gaining access to the files.
+</aside>
+<h2 id='developer-portal'>Developer Portal</h2>
+<p>The Ingenico Developer Portal serves as a distribution channel for our mPOS SDK material, as well as a collaborative environment for third-party developers to get the support they need for their projects and applications. </p>
+
+<p><br/>A request for an account can be made at http://developer.ingenico.us and will be reviewed by the internal Ingenico team before the account is activated. (Note: This allows creation of a user account only, therefore each user (developer) for an ISV will need to register and create their own account.)</p>
+
+<p><br/>Once approved, an NDA will be executed and a new client/customer record will be created in the portal for future portal notifications, updates, and any other changes.</p>
+
+<p><br/>Existing clients who utilize the ROAMpay API (or are clients for RUA or another API product through Netsuite) will be asked to register on the developer portal in order to access the new mPOS EMV SDK.</p>
+<h2 id='javadoc-resource'>JavaDoc Resource</h2>
+<p>The SDK comes with an included Javadoc resource which contains information regarding all API classes, methods, exceptions, and other definitions. The Javadoc can be found in the <strong>\libs</strong> folder of the SDK package that was downloaded. </p>
+
+<p>The filename for the Javadoc resource is as follows: <strong>ingenico-mpos-sdk- v1.X.X-javadoc.jar</strong>. </p>
+
+<p>In order to properly open the Javadoc, please extract all contents within the jar file into a separate folder and locate the <strong>index.html</strong> file.</p>
+<h1 id='setup'>Setup</h1>
+<p>In order to begin using the SDK, you must integrate the .aar file into your project. The .aar file can be found within the SDK package located on the developer portal’s software page. </p>
+
+<aside class="notice">
+The .aar file includes everything you need to begin building your application, including all of Ingenico source code and resource files. 
+</aside>
+<h2 id='integrate-the-aar-file'>Integrate the .aar File</h2>
+<p>To integrate the .aar file into your project, please follow the steps below:</p>
+
+<ul>
+<li><strong>Copy the .aar file to your project</strong> <br/>
+
+<ol>
+<li>Download the mPOS EMV Android SDK from the <a href="https://developer.ingenico.us/">developer portal</a>.</li>
+<li>Unzip the downloaded contents to a new file destination.</li>
+<li>Open the unzipped folder contents.</li>
+<li>Navigate to the <code>/libs</code> folder.</li>
+<li>Copy the .aar file within the directory.</li>
+<li>Navigate to your project’s <code>/libs</code> directory (typically located at: <code>project directory/apps/libs)</code>.</li>
+<li>Paste the .aar file to your project’s <code>/libs</code> folder.</li>
+</ol></li>
+</ul>
+
+<blockquote>
+<p>Insert this code into the dependencies section:</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+
+<span class="n">dependencies</span> <span class="o">{</span>
+    <span class="n">compile</span> <span class="nf">fileTree</span><span class="o">(</span><span class="nl">include:</span> <span class="o">[</span><span class="err">'</span><span class="o">*.</span><span class="na">jar</span><span class="err">'</span><span class="o">],</span> <span class="nl">dir:</span> <span class="err">'</span><span class="n">libs</span><span class="err">'</span><span class="o">)</span>
+    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span><span class="err">'</span><span class="n">file</span> <span class="n">name</span><span class="err">'</span><span class="o">,</span> <span class="nl">ext:</span><span class="err">'</span><span class="n">aar</span><span class="err">'</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="n">repositories</span><span class="o">{</span>
+    <span class="n">flatDir</span><span class="o">{</span>
+        <span class="n">dirs</span> <span class="err">'</span><span class="n">libs</span><span class="err">'</span>
+    <span class="o">}</span>
+<span class="o">}</span><span class="err">'</span>
+
+</code></pre>
+<ul>
+<li><strong>Update the build.gradle file</strong>
+
+<ol>
+<li>Open your Android project.</li>
+<li>Navigate and open the <code>build.gradle</code> (Module.app) file.</li>
+<li>Insert the code in the right-hand column into the dependencies section where: 
+
+<ul>
+<li><code>file name</code> is the name of the copied .aar file from Step 1 (e.g. ingenico-mpos-sdk-v1.0.0-release). </li>
+</ul></li>
+</ol></li>
+</ul>
+<h1 id='initialize-and-login'>Initialize and Login</h1><h2 id='initialize'>Initialize</h2>
+<blockquote>
+<p>The Ingenico class acts as an entry point to the Ingenico mPOS SDK.</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">initialize</span><span class="o">(</span><span class="n">baseURL</span><span class="o">,</span>
+                        <span class="n">apiKey</span><span class="o">,</span>
+                        <span class="n">clientVersion</span><span class="o">);</span> 
+
+</code></pre>
+<p>In order to use the SDK, you must first initialize it. The method shown here initializes the singleton instance of Ingenico and sets the API key, Base URL and Client Version. </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>baseURL</td>
+<td>String</td>
+<td>Hostname of the Ingenico Payment Server</td>
+</tr>
+<tr>
+<td>apiKey</td>
+<td>String</td>
+<td>API Key of the client application for the Ingenico Payment Server</td>
+</tr>
+<tr>
+<td>clientVersion</td>
+<td>String</td>
+<td>Version of the client application</td>
+</tr>
+</tbody></table>
+<h2 id='login'>Login</h2><pre class="highlight java tab-java"><code>
+<span class="kd">class</span> <span class="nc">LoginCallbackImpl</span> <span class="kd">implements</span> <span class="n">LoginCallback</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">done</span><span class="o">(</span><span class="n">Integer</span> <span class="n">responseCode</span><span class="o">,</span> <span class="n">UserProfile</span> <span class="n">userProfile</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">ResponseCode</span><span class="o">.</span><span class="na">Success</span> <span class="o">==</span> <span class="n">responseCode</span><span class="o">)</span> <span class="o">{</span>
+            <span class="cm">/*Login succeeded*/</span>
+       <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="cm">/*Login failed and the responseCode will indicate the error */</span>
+       <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="n">Ingenico</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">user</span><span class="o">().</span><span class="na">login</span><span class="o">(</span><span class="n">username</span><span class="o">,</span> <span class="n">password</span><span class="o">,</span> <span class="k">new</span> <span class="n">LoginCallbackImpl</span><span class="o">());</span>
+
+
+</code></pre>
+<p>Once you have successfully initialized the SDK, you can now log in. Provide your username and password as input parameters (listed below) to successfully log in. </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>String</td>
+<td>Username used to log in to the system</td>
+</tr>
+<tr>
+<td>password</td>
+<td>String</td>
+<td>User&#39;s password</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="java">Android</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

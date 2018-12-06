@@ -1,0 +1,10 @@
+<p>&lt;% pages = sitemap.resources.find_all{|p| p.source_file.match(/.html/) } %&gt;
+&lt; ?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+&lt; % pages.each do |p| %&gt;
+  <url>
+    <loc>http://youdomain.com/&lt; %=p.destination_path.gsub(&#39;/index.html&#39;,&#39;&#39;)%&gt;</loc>
+    <priority>0.7</priority>
+  </url>
+&lt; % end %&gt;
+</urlset></p>
